@@ -2,17 +2,30 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1120px',
+        xl: '1200px'
+      }
+    },
     extend: {
       colors: {
-        'sculptique-green': '#1a472a', // Màu nút Add to Cart chính
-        'sculptique-cream': '#fdfbf0', // Màu nền nhẹ của các section
-        'sculptique-text': '#1d1d1f',  // Màu chữ chuẩn Apple-style
+        'sculptique-green': '#1a472a',
+        'sculptique-cream': '#f8f6f1',
+        'sculptique-text': '#1d1d1f',
+        'sculptique-muted': '#4a4a4a',
+        'sculptique-accent': '#e11d48',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'], // Cần cài font Inter để đạt Pixel-perfect
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
       },
       maxWidth: {
-        'page': '1200px', // Container chuẩn của trang mẫu
+        page: '1250px',
       }
     },
   },
