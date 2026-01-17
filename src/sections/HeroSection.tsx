@@ -71,17 +71,17 @@ const HeroSection = () => {
                 />
               </div>
 
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 lg:bottom-5">
-                <button className="inline-flex border border-black items-center gap-1.5 rounded-full bg-white/98 px-4 py-2 text-sm text-sculptique-secondary shadow-[0px_8px_24px_rgba(0,0,0,0.12)] backdrop-blur-lg transition bg-[#ffffffd9] hover:opacity-85 lg:gap-2 lg:text-lg lg:px-6 lg:py-3">
-                  <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center sm:h-7 sm:w-7">
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 lg:bottom-7">
+                <button className="inline-flex border border-black items-center rounded-full bg-white/98 px-4 py-1 backdrop-blur-lg transition bg-[#ffffffd9]/80 hover:opacity-85 lg:gap-2 lg:text-lg lg:px-6 lg:py-2">
+                  <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center lg:h-7 lg:w-7">
                     <img
                       src={NUTRITION_ICON}
                       alt=""
-                      className="h-3 w-3 lg:h-4 lg:w-4"
+                      className="h-4 w-4 lg:h-6 lg:w-6"
                       loading="lazy"
                     />
                   </span>
-                  <span className="whitespace-nowrap">
+                  <span className="whitespace-nowrap font-serif text-sm text-sculptique-secondary">
                     Nutritional Information
                   </span>
                 </button>
@@ -89,7 +89,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="lg:mt-4 grid w-full grid-cols-2 gap-4">
+          <div className="lg:mt-5 grid w-full grid-cols-2 gap-4">
             {GRID_IMAGES_2COL.map((img, idx) => (
               <div
                 key={idx}
@@ -105,7 +105,7 @@ const HeroSection = () => {
             ))}
           </div>
 
-          <div className="mt-4 grid w-full grid-cols-3 gap-4">
+          <div className="mt-5 grid w-full grid-cols-3 gap-4">
             {GRID_IMAGES_3COL.map((img, idx) => (
               <div
                 key={idx}
@@ -159,7 +159,7 @@ const HeroSection = () => {
             Sculptique™
           </h1>
 
-          <ul className="mt-8 space-y-4 lg:space-y-5">
+          <ul className="mt-4 space-y-4">
             {SELLING_POINTS.map((point) => (
               <li key={point.text} className="flex items-center gap-3">
                 <img
@@ -174,9 +174,9 @@ const HeroSection = () => {
               </li>
             ))}
           </ul>
-          <div id="maximized" className="relative mt-4 w-ful bg-white">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:gap-6">
+          <div id="maximized" className="relative mt-4 w-full bg-white">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-start lg:gap-4">
+              <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4">
                 <div className="flex items-center gap-2 text-sculptique-text">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -250,26 +250,26 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <button
-              type="button"
-              className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-neutral-200/80 text-sculptique-text transition hover:bg-neutral-300"
-              id="close-button"
-              aria-label="Click to minimize banner"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="8"
-                height="8"
-                viewBox="0 0 6 6"
-                fill="none"
+              <button
+                type="button"
+                className="absolute right-3 top-3 lg:static flex h-5 w-5 items-center justify-center rounded-full bg-neutral-200/80 text-sculptique-text transition hover:bg-neutral-300"
+                id="close-button"
+                aria-label="Click to minimize banner"
               >
-                <path
-                  d="M1 5.5L0.5 5L2.5 3L0.5 1L1 0.5L3 2.5L5 0.5L5.5 1L3.5 3L5.5 5L5 5.5L3 3.5L1 5.5Z"
-                  fill="#212121"
-                ></path>
-              </svg>
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="7"
+                  height="7"
+                  viewBox="0 0 6 6"
+                  fill="none"
+                >
+                  <path
+                    d="M1 5.5L0.5 5L2.5 3L0.5 1L1 0.5L3 2.5L5 0.5L5.5 1L3.5 3L5.5 5L5 5.5L3 3.5L1 5.5Z"
+                    fill="#212121"
+                  ></path>
+                </svg>
+              </button>
+            </div>
           </div>
 
           <BundlesSection />
