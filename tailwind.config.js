@@ -20,7 +20,7 @@ export default {
         'sculptique-muted': '#4a4a4a',
         'sculptique-accent': '#e11d48',
         'sculptique-secondary': '#000000bf',
-        'sculptique-yellow-primary': '#f3eee0',
+        'sculptique-yellow': '#f3eee0',
         'sculptique-primary': '#000000',
       },
       fontFamily: {
