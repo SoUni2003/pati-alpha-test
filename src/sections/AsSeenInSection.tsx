@@ -16,7 +16,7 @@ const AsSeenInSection = () => {
         </h3>
         
         <div className="relative flex w-full overflow-hidden">
-          <div className="flex animate-infinite-scroll items-center gap-12 whitespace-nowrap pb-2 lg:gap-20">
+          <div className="flex animate-infinite-scroll items-center gap-12 whitespace-nowrap pb-2 lg:gap-20 pr-12 lg:pr-20">
             {LOGOS.map((src, index) => (
               <img
                 key={`logo-1-${index}`}

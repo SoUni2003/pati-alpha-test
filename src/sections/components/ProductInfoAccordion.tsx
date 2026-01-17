@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MoneyBackGuarantee from "../../components/MoneyBackGuarantee";
 
 const ACCORDION_ITEMS = [
   {
@@ -187,16 +188,11 @@ const ProductInfoAccordion = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-3">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/60-days_11622780_1.png?v=1752066864"
-            alt=""
-            className="h-6 w-6 object-contain"
-          />
-          <p className="text-base font-nunito font-medium text-sculptique-text">
-            60-Day Money-Back Guarantee
-          </p>
-        </div>
+        <MoneyBackGuarantee 
+          className="flex items-center gap-3"
+          iconClassName="h-6 w-6 object-contain"
+          textClassName="text-base font-nunito font-medium text-sculptique-text"
+        />
         <div className="flex items-center gap-3">
           <img
             src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_1000003293.png?v=1752066864"
@@ -256,7 +252,7 @@ const ProductInfoAccordion = () => {
           return (
             <div
               key={idx}
-              className={`overflow-hidden border bg-white rounded-[32px] transition-all duration-1500 ${
+              className={`overflow-hidden border bg-white rounded-[32px] transition-all duration-700 ${
                 isOpen ? "border-[#1f8f55]" : "border-gray-200"
               }`}
             >
@@ -287,11 +283,13 @@ const ProductInfoAccordion = () => {
                 </span>
               </button>
               <div
-                className={`transition-all duration-1000 ease-in-out ${
-                  isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+                className={`grid transition-all duration-700 ease-in-out ${
+                  isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                 }`}
               >
-                <div className="px-6 pb-6 pt-0">{item.content}</div>
+                <div className="overflow-hidden">
+                  <div className="px-6 pb-6 pt-0">{item.content}</div>
+                </div>
               </div>
             </div>
           );

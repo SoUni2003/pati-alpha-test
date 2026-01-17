@@ -1,10 +1,11 @@
 import { useState } from "react";
+import MoneyBackGuarantee from "../components/MoneyBackGuarantee";
 
 const FAQS = [
   {
     question: "How is this different from lymphatic drops I saw on TikTok?",
     answer:
-      "Our formula contains therapeutic doses of clinically proven ingredients in capsule form, which bypasses stomach acid destruction. TikTok drops are typically diluted herbal water with no bioavailability. We target all 6 mechanisms of lymphatic dysfunction simultaneously, not just temporary fluid movement.",
+      "Lymphatic drops have poor bioavailability—liquid ingredients pass through your digestive system too quickly to be properly absorbed. Most contain only milligrams of herbs (symbolic amounts, not therapeutic doses) and act as basic diuretics that pull water from your bloodstream, not from tissue swelling.\n\nSculptique uses capsules with therapeutic doses (100-500mg per ingredient) that are properly absorbed and work at the cellular level to restore vessel function, break down protein clogs, and strengthen vessel walls—not just make you urinate more.",
   },
   {
     question: "Why didn't my diet changes work?",
@@ -54,47 +55,67 @@ const FAQS = [
 ];
 
 const FAQSection = () => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-white py-10 sm:py-12 lg:py-16">
-      <div className="mx-auto w-full max-w-page px-4 sm:px-6">
-        <h2 className="font-serif text-3xl leading-snug text-sculptique-text sm:text-4xl lg:text-[44px] lg:leading-[1.2]">
-          Frequently Asked Questions
-        </h2>
+    <section className="bg-white py-10 sm:py-16 lg:py-24">
+      <div className="mx-auto w-full max-w-[900px] px-4 sm:px-6">
+        <div className="rounded-2xl bg-sculptique-yellow p-6 sm:px-10 sm:py-14 md:px-16 md:py-16">
+          <h2 className="mb-12 text-center font-serif text-3xl leading-snug text-sculptique-text sm:text-4xl lg:text-[42px]">
+            Frequently Asked Questions
+          </h2>
 
-        <div className="mt-12 space-y-3">
-          {FAQS.map((faq, idx) => (
-            <button
-              key={idx}
-              onClick={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
-              className="w-full"
-            >
-              <div className="flex items-center justify-between rounded-2xl bg-sculptique-cream px-6 py-5 text-left transition hover:bg-opacity-80 sm:px-8">
-                <h3 className="font-semibold text-sculptique-text sm:text-lg">
-                  {faq.question}
-                </h3>
-                <svg
-                  className={`h-6 w-6 flex-shrink-0 text-sculptique-text transition ${
-                    expandedIndex === idx ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+          <div className="">
+            {FAQS.map((faq, idx) => (
+              <div key={idx} className="border-b border-white/40">
+                <button
+                  onClick={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
+                  className="flex w-full items-start justify-between py-5 text-left sm:items-center"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
+                  <h3 className="pr-4 font-sans text-lg text-sculptique-text sm:text-[19px]">
+                    {faq.question}
+                  </h3>
+                  <svg
+                    className={`h-5 w-5 flex-shrink-0 text-sculptique-text transition-transform duration-300 ${
+                      expandedIndex === idx ? "rotate-180" : ""
+                    }`}
+                    fill="currentColor"
+                    viewBox="0 0 512 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    {/* Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc. */}
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                  </svg>
+                </button>
 
-              {expandedIndex === idx && (
-                <div className="border-l-2 border-sculptique-cream bg-sculptique-cream/50 px-6 py-5 sm:px-8">
-                  <p className="text-base leading-7 text-sculptique-muted sm:text-lg">
-                    {faq.answer}
-                  </p>
+                <div
+                  className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${
+                    expandedIndex === idx
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="space-y-4 pb-5 text-base leading-relaxed text-sculptique-text/80 sm:text-lg">
+                      {faq.answer.split('\n\n').map((paragraph, i) => (
+                        <p key={i}>{paragraph}</p>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 text-center">
+            <button className="w-full sm:w-auto min-w-[320px] rounded bg-black px-8 py-4 text-lg font-bold text-white transition hover:bg-gray-900">
+                Try Lymphatic Drainage Risk-Free
             </button>
-          ))}
+            <MoneyBackGuarantee 
+              className="flex items-center gap-2 text-sm sm:text-base text-sculptique-text" 
+              iconClassName="w-5 h-5 object-contain"
+            />
         </div>
       </div>
     </section>

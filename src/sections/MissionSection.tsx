@@ -1,51 +1,33 @@
+import React from 'react';
+
 const MissionSection = () => {
   return (
-    <section className="bg-sculptique-cream py-10 sm:py-12 lg:py-16">
-      <div className="mx-auto w-full max-w-page px-4 sm:px-6">
-        <h2 className="max-w-3xl font-serif text-3xl leading-snug text-sculptique-text sm:text-4xl lg:text-[44px] lg:leading-[1.2]">
-          We're On A Mission To Help 100,000,000 Women Visibly, Naturally Get Rid Of Bloating…And Feel Like Themselves Again
-        </h2>
-
-        <div className="mt-12 rounded-3xl bg-white p-8 sm:p-12 lg:p-16">
-          <p className="text-center text-base font-semibold text-sculptique-text sm:text-lg">
-            Here's where we're at right now:
-          </p>
-
-          <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="flex flex-col items-center text-center">
-              <div className="text-4xl font-bold text-sculptique-green sm:text-5xl">
-                93K+
-              </div>
-              <p className="mt-2 text-base text-sculptique-muted">
-                Transformations Completed
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <div className="text-4xl font-bold text-sculptique-green sm:text-5xl">
-                4.8/5
-              </div>
-              <p className="mt-2 text-base text-sculptique-muted">
-                Average Rating from Real Customers
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <div className="text-4xl font-bold text-sculptique-green sm:text-5xl">
-                60 Days
-              </div>
-              <p className="mt-2 text-base text-sculptique-muted">
-                Money-Back Guarantee
-              </p>
-            </div>
+    <section className="bg-white py-12 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
+          {/* Left: Content & Stats */}
+          <div className="flex flex-col flex-1">
+            <h2 className="mb-4 font-serif text-3xl leading-tight text-sculptique-text sm:text-4xl lg:text-5xl">
+              We’re On A Mission To Help 100,000,000 Women Visibly, Naturally Get Rid Of Bloating...And Feel Like Themselves Again
+            </h2>
+            <p className="mb-8 font-sans text-lg text-sculptique-text sm:mb-12 sm:text-xl">
+              Here's where we're at right now:
+            </p>
+            <img 
+              src="https://trysculptique.com/cdn/shop/files/numbdeskt-min_png.png?v=1760942458" 
+              alt="87% of women reported less noticeable eye bags, 89% noticed firmer skin"
+              className="w-full h-auto rounded-xl"
+            />
           </div>
 
-          <img
-            src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Trustpilot_review.png?v=1752480694"
-            alt="Trustpilot review"
-            className="mx-auto mt-10 h-12 w-auto object-contain"
-            loading="lazy"
-          />
+          {/* Right: Bottle + Chart */}
+          <div className="flex-1 flex justify-center lg:justify-end">
+            <img
+              src="https://trysculptique.com/cdn/shop/files/Frame_1000003537.jpg?v=1760943777"
+              alt="Lymphatic Drainage Results"
+              className="h-auto w-full max-w-[500px] object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>

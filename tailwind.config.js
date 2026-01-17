@@ -22,6 +22,7 @@ export default {
         'sculptique-secondary': '#000000bf',
         'sculptique-yellow': '#f3eee0',
         'sculptique-primary': '#000000',
+        'sculptique-pink': '#FA8A8A',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

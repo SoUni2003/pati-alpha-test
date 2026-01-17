@@ -5,6 +5,7 @@ import SymptomsSection from './sections/SymptomsSection'
 import WhyNothingWorkedSection from './sections/WhyNothingWorkedSection'
 import IngredientsSection from './sections/IngredientsSection'
 import ReviewsSection from './sections/ReviewsSection'
+import FeaturesSection from './sections/FeaturesSection'
 import ExpertSection from './sections/ExpertSection'
 import TestimonialsSection from './sections/TestimonialsSection'
 import FAQSection from './sections/FAQSection'
@@ -22,6 +23,7 @@ const App = () => {
         <WhyNothingWorkedSection />
         <IngredientsSection />
         <ReviewsSection />
+        <FeaturesSection />
         <ExpertSection />
         <TestimonialsSection />
         <FAQSection />

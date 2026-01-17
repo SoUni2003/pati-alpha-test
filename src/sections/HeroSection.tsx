@@ -58,7 +58,7 @@ const HeroSection = () => {
               <img
                 src={HERO_IMAGE}
                 alt="Sculptique lymphatic drainage bottle"
-                className="absolute inset-0 h-[588px] w-full object-cover rounded-lg"
+                className="absolute inset-0 h-auto lg:h-[588px] w-full object-cover rounded-lg"
                 loading="lazy"
               />
 
