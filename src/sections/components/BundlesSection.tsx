@@ -89,10 +89,8 @@ const BundlesSection = () => {
 
   return (
     <section className="bg-white py-2 lg:py-4">
-      <div className="mx-auto w-full max-w-page px-4 sm:px-6">
+      <div className="mx-auto w-full max-w-page px-3 sm:px-0">
         <div className="">
-        
-
           <div className="space-y-6">
             {BUNDLES.map((bundle, index) => {
               const selected = selectedBundle === bundle.title;

@@ -23,19 +23,15 @@ const WhyNothingWorkedSection = () => {
   return (
     <section className="bg-sculptique-cream py-10 sm:py-12 lg:py-16">
       <div className="mx-auto w-full max-w-page px-4 sm:px-6">
-        <h2 className="font-serif text-3xl leading-snug text-sculptique-text sm:text-4xl lg:text-[44px] lg:leading-[1.2]">
+        <h2 className="font-serif text-center text-3xl leading-snug text-sculptique-text sm:text-4xl lg:text-[44px] lg:leading-[1.2]">
           Why Nothing Has Worked
         </h2>
 
-        <div className="mt-12 space-y-12">
+        <div className="grid grid-col-1 lg:grid-cols-3 mt-12 space-y-12">
           {REASONS.map((reason, idx) => (
-            <div key={idx} className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
-              <div className="w-full lg:w-6/12">
-                <h3 className="font-serif text-2xl font-semibold text-sculptique-text sm:text-3xl">
-                  {reason.title}
-                </h3>
-
-                <div className="mt-4 flex items-start gap-3">
+            
+            <div key={idx}>
+             <div className="mt-4 flex flex-col lg:flex-row lg:items-center">
                   <img
                     src={reason.icon}
                     alt=""
@@ -46,6 +42,11 @@ const WhyNothingWorkedSection = () => {
                     Why it failed
                   </p>
                 </div>
+              <div className="w-full lg:w-6/12">
+                <h3 className="font-serif text-2xl font-semibold text-sculptique-text sm:text-3xl">
+                  {reason.title}
+                </h3>
+               
 
                 <p className="mt-4 text-base leading-7 text-sculptique-muted sm:text-lg">
                   {reason.reason}

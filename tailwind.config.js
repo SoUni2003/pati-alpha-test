@@ -14,15 +14,22 @@ export default {
     },
     extend: {
       colors: {
-        'sculptique-green': '#1a472a',
+        'sculptique-green': '#039869',
         'sculptique-cream': '#f8f6f1',
-        'sculptique-text': '#1d1d1f',
+        'sculptique-text': '#000000',
         'sculptique-muted': '#4a4a4a',
         'sculptique-accent': '#e11d48',
+        'sculptique-secondary': '#000000bf',
+        'sculptique-yellow-primary': '#f3eee0',
+        'sculptique-primary': '#000000',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        nunito: ['Nunito', 'sans-serif'],
+        lora: ['Lora', 'serif'],
+        trirong: ['Trirong', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       maxWidth: {
         page: '1250px',

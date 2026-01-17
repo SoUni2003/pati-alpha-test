@@ -2,9 +2,9 @@ const LOGO_SRC = "https://trysculptique.com/cdn/shop/files/gempages_567005027885
 
 const Header = () => {
   return (
-    <header className="bg-white/95 py-5 shadow-[0px_12px_40px_rgba(0,0,0,0.04)] backdrop-blur">
+    <header className="bg-white py-3">
       <div className="mx-auto flex w-full max-w-page items-center justify-center px-4 sm:px-6">
-        <img src={LOGO_SRC} alt="Sculptique" className="h-8 w-auto" loading="lazy" />
+        <img src={LOGO_SRC} alt="Sculptique" className="h-11 w-auto" loading="lazy" />
       </div>
     </header>
   );
