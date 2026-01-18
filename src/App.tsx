@@ -7,10 +7,10 @@ import IngredientsSection from './sections/IngredientsSection'
 import ReviewsSection from './sections/ReviewsSection'
 import FeaturesSection from './sections/FeaturesSection'
 import ExpertSection from './sections/ExpertSection'
-import TestimonialsSection from './sections/TestimonialsSection'
 import FAQSection from './sections/FAQSection'
 import MissionSection from './sections/MissionSection'
 import FinalCTASection from './sections/FinalCTASection'
+import VideoCarousel from './sections/components/VideoCarousel'
 
 const App = () => {
   return (
@@ -25,7 +25,7 @@ const App = () => {
         <ReviewsSection />
         <FeaturesSection />
         <ExpertSection />
-        <TestimonialsSection />
+        <VideoCarousel />
         <FAQSection />
         <MissionSection />
         <FinalCTASection />

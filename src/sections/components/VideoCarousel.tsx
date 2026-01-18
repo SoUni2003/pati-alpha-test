@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import MoneyBackGuarantee from "../../components/MoneyBackGuarantee";
+import MainButton from "../../components/MainButton";
 
 const VIDEOS = [
   {
@@ -58,15 +59,16 @@ const VideoCarousel = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  const [scrollProgress, setScrollProgress] = useState(10);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const handleScroll = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
       const maxScroll = scrollWidth - clientWidth;
       const scrollRatio = maxScroll > 0 ? scrollLeft / maxScroll : 0;
-      const progress = 10 + (scrollRatio * 90);
-      setScrollProgress(progress);
+      const thumbWidth = 100 / VIDEOS.length;
+      const maxLeft = 100 - thumbWidth;
+      setScrollProgress(scrollRatio * maxLeft);
     }
   };
 
@@ -97,43 +99,50 @@ const VideoCarousel = () => {
 
   const scrollTo = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
-      const { clientWidth } = scrollContainerRef.current;
-      const scrollAmount = clientWidth * 0.5;
-      scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
+        const container = scrollContainerRef.current;
+        const { firstElementChild } = container;
+        const itemWidth = firstElementChild ? firstElementChild.clientWidth : 0;
+        
+        const gapStyles = window.getComputedStyle(container).columnGap || window.getComputedStyle(container).gap;
+        const gap = parseFloat(gapStyles) || 0;
+        
+        const scrollAmount = itemWidth + gap;
+
+        container.scrollBy({
+            left: direction === "left" ? -scrollAmount : scrollAmount,
+            behavior: "smooth",
+        });
     }
   };
 
   return (
-    <section className="bg-[#f3eee0] py-12 md:py-20 font-sans">
-      <div className="mx-auto w-full max-w-[1200px]">
+    <section className="bg-sculptique-yellow py-12 lg:py-[56px]">
+      <div className="mx-auto w-full max-w-page px-4 lg:px-0">
         
-        <div className="mb-10 flex flex-col items-center justify-center text-center">
+        <div className="mb-4 flex flex-col items-center justify-center text-center">
             <img 
               src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Trustpilot_review_2.png?v=1752485383" 
-              className="mb-6 h-6 object-contain md:h-8" 
+              className="mb-4 h-11 object-contain" 
               alt="Trustpilot Reviews" 
             />
-            <h2 className="text-3xl md:text-5xl font-serif text-[#1f2024] leading-tight">
+            <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center font-medium">
               See The Stories of Sculptique™ Women Firsthand
             </h2>
         </div>
 
-        <div className="relative mb-12">
+        <div className="relative mb-12 mt-6">
             <div
                 ref={scrollContainerRef}
-                className="flex w-full  pl-4 snap-x snap-mandatory gap-4 overflow-x-auto pb-4 scrollbar-hide md:w-full md:mx-0 md:px-0 md:gap-6"
+                className="flex w-full pl-4 lg:pl-0 snap-x snap-mandatory gap-4 overflow-x-auto pb-4 scrollbar-hide md:w-full md:mx-0 md:px-0 lg:gap-4"
                 style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
                 {VIDEOS.map((video, index) => (
                 <div
                     key={video.id}
-                    className="relative min-w-[78%] flex-shrink-0 snap-center md:min-w-[calc(25%-18px)]"
+                    className="relative min-w-[78%] flex-shrink-0 snap-center lg:snap-start lg:min-w-[25%]"
                 >
                     <div 
-                        className="relative h-[476px] w-full overflow-hidden rounded-lg bg-gray-200 cursor-pointer group shadow-sm transition-transform hover:scale-[1.01] md:h-auto md:aspect-[9/16] lg:aspect-auto lg:h-[489px]"
+                        className="relative h-[476px] w-full overflow-hidden rounded-lg bg-gray-200 cursor-pointer group shadow-sm transition-transform hover:scale-[1.01]  lg:aspect-auto lg:h-[523px]"
                         onClick={() => togglePlay(index)}
                     >
                         <video
@@ -147,7 +156,7 @@ const VideoCarousel = () => {
                         />
                         <div 
                             className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
-                            playingIndex === index ? "opacity-0 hover:opacity-100" : "opacity-100"
+                            playingIndex === index ? "opacity-0" : "opacity-100"
                             }`}
                         >
                             <img 
@@ -162,34 +171,32 @@ const VideoCarousel = () => {
             </div>
 
             <div className="mt-4 flex items-center justify-between gap-4 md:mt-8 md:gap-10">
-                <div className="relative h-[2px] w-full flex-1 overflow-hidden bg-[#e5e5e5]">
+                <div className="relative h-[4px] w-full flex-1 overflow-hidden bg-[#e5e5e5]">
                     <div 
-                        className="absolute top-0 bottom-0 left-0 bg-[#039869] transition-all duration-300 ease-out"
-                        style={{ width: `${scrollProgress}%` }} 
+                        className="absolute top-0 bottom-0 bg-[#039869]"
+                        style={{ width: `${100 / VIDEOS.length}%`, left: `${scrollProgress}%` }} 
                     />
                 </div>
 
                 <div className="flex items-center gap-3 md:gap-4 flex-shrink-0">
                     <button
                         onClick={() => scrollTo("left")}
-                        className="group flex h-10 w-10 items-center justify-center rounded-full border border-[#1f2024]/10 bg-white/50 hover:bg-white shadow-sm transition-all active:scale-95 disabled:opacity-50"
                         aria-label="Scroll left"
                     >
                         <img 
                             src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin_55aa38bb-cb5e-4608-9097-927814968771.png?v=1758716845" 
                             alt="Previous"
-                            className="h-5 w-5 opacity-70 transition-opacity group-hover:opacity-100"
+                            className="h-8 w-8  opacity-70 transition-opacity group-hover:opacity-100"
                         />
                     </button>
                     <button
                         onClick={() => scrollTo("right")}
-                        className="group flex h-10 w-10 items-center justify-center rounded-full border border-[#1f2024]/10 bg-white/50 hover:bg-white shadow-sm transition-all active:scale-95 disabled:opacity-50"
                         aria-label="Scroll right"
                     >
                         <img 
                             src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin_55aa38bb-cb5e-4608-9097-927814968771.png?v=1758716845" 
                             alt="Next"
-                            className="h-5 w-5 rotate-180 opacity-70 transition-opacity group-hover:opacity-100"
+                            className="h-8 w-8 rotate-180 opacity-70 transition-opacity group-hover:opacity-100"
                         />
                     </button>
                 </div>
@@ -197,12 +204,7 @@ const VideoCarousel = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center mt-12">
-            <a 
-                href="https://pay.trysculptique.com/lymphatic/checkout" 
-                className="bg-[#1f2024] text-white font-medium py-4 px-12 rounded-full text-lg md:text-xl transition-all hover:scale-105 hover:bg-opacity-90 shadow-lg text-center"
-            >
-                Try Lymphatic Drainage Risk-Free
-            </a>
+             <MainButton title="Try Lymphatic Drainage Risk-Free" to="https://pay.trysculptique.com/lymphatic/checkout" />
             
             <div className="mt-6 flex justify-center">
                 <MoneyBackGuarantee />
