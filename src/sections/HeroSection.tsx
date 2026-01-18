@@ -1,3 +1,4 @@
+import { useState } from "react";
 import BundlesSection from "./components/BundlesSection";
 import ProductInfoAccordion from "./components/ProductInfoAccordion";
 
@@ -48,96 +49,182 @@ const SELLING_POINTS = [
   },
 ];
 
+const OTHER_IMAGES = [
+  "https://trysculptique.com/cdn/shop/files/tiredness-min.png?v=1758713216",
+  "https://trysculptique.com/cdn/shop/files/puffiness-min.png?v=1758713216",
+];
+
+const ALL_IMAGES = [
+  HERO_IMAGE,
+  ...GRID_IMAGES_2COL,
+  ...GRID_IMAGES_3COL,
+];
+
 const HeroSection = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const nextSlide = () => {
+    setActiveSlide((prev) => (prev + 1) % ALL_IMAGES.length);
+  };
+
+  const prevSlide = () => {
+    setActiveSlide((prev) => (prev - 1 + ALL_IMAGES.length) % ALL_IMAGES.length);
+  };
+
   return (
     <section className="bg-white py-8 px-1">
       <div className="mx-auto flex w-full max-w-[1250px] flex-col gap-x-16 lg:flex-row lg:items-start">
         <div className="flex w-full flex-col items-center lg:w-[50%] max-w-[588px] ">
-          <div className="relative w-full">
-            <div className="relative w-full pb-[100%]">
-              <img
-                src={HERO_IMAGE}
-                alt="Sculptique lymphatic drainage bottle"
-                className="absolute inset-0 h-auto lg:h-[588px] w-full object-cover rounded-lg"
-                loading="lazy"
-              />
-
-              <div className="absolute right-3 top-3 lg:right-4 lg:top-4">
-                <img
-                  src={NYSALE_BADGE}
-                  alt="New Years Sale"
-                  className="h-20 w-20 lg:h-[120px] lg:w-[120px] object-contain"
-                  loading="lazy"
+          
+          {/* Mobile Carousel */}
+          <div className="flex lg:hidden w-full flex-col mb-4">
+            <div className="relative w-full aspect-square bg-[#f7f7f7] rounded-lg overflow-hidden">
+                <img 
+                  src={ALL_IMAGES[activeSlide]} 
+                  alt="Product slide" 
+                  className="w-full h-full object-cover" 
                 />
-              </div>
+                
+                {activeSlide === 0 && (
+                   <>
+                     <div className="absolute right-3 top-3">
+                        <img
+                          src={NYSALE_BADGE}
+                          alt="New Years Sale"
+                          className="h-20 w-20 object-contain"
+                          loading="lazy"
+                        />
+                      </div>
 
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 lg:bottom-7">
-                <button className="inline-flex border border-black items-center rounded-full bg-white/98 px-4 py-1 backdrop-blur-lg transition bg-[#ffffffd9]/80 hover:opacity-85 lg:gap-2 lg:text-lg lg:px-6 lg:py-2">
-                  <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center lg:h-7 lg:w-7">
-                    <img
-                      src={NUTRITION_ICON}
-                      alt=""
-                      className="h-4 w-4 lg:h-6 lg:w-6"
-                      loading="lazy"
-                    />
-                  </span>
-                  <span className="whitespace-nowrap font-serif text-sm text-sculptique-secondary">
-                    Nutritional Information
-                  </span>
-                </button>
-              </div>
+                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                        <button className="inline-flex border border-black items-center rounded-full bg-white/98 px-4 py-1 backdrop-blur-lg transition bg-[#ffffffd9]/80 hover:opacity-85">
+                          <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center mr-2">
+                            <img
+                              src={NUTRITION_ICON}
+                              alt=""
+                              className="h-4 w-4"
+                              loading="lazy"
+                            />
+                          </span>
+                          <span className="whitespace-nowrap font-serif text-sm text-sculptique-secondary">
+                            Nutritional Information
+                          </span>
+                        </button>
+                      </div>
+                   </>
+                )}
+
+                 <button 
+                    onClick={prevSlide} 
+                    className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center border border-gray-200 shadow-sm z-10"
+                 > 
+                    <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+                 </button>
+                 <button 
+                    onClick={nextSlide} 
+                    className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center border border-gray-200 shadow-sm z-10"
+                 > 
+                    <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                 </button>
+            </div>
+
+            <div className="mt-4 flex gap-2 overflow-hidden px-1 no-scrollbar pb-2">
+                {ALL_IMAGES.map((img, idx) => (
+                    <button 
+                       key={idx} 
+                       onClick={() => setActiveSlide(idx)}
+                       className={`relative w-16 h-16 shrink-0 rounded-lg overflow-hidden border-2 transition-all ${activeSlide === idx ? 'border-[#0c7c00] opacity-100' : 'border-transparent opacity-70'}`}
+                    >
+                        <img src={img} className="w-full h-full object-cover" loading="lazy" />
+                    </button>
+                ))}
             </div>
           </div>
 
-          <div className="lg:mt-5 grid w-full grid-cols-2 gap-4">
-            {GRID_IMAGES_2COL.map((img, idx) => (
-              <div
-                key={idx}
-                className="overflow-hidden rounded-2xl bg-white shadow-sm"
-              >
+          <div className="hidden lg:flex w-full flex-col items-center">
+            <div className="relative w-full">
+              <div className="relative w-full pb-[100%]">
                 <img
-                  src={img}
-                  alt=""
-                  className="h-[286px] w-[286px] object-cover"
+                  src={HERO_IMAGE}
+                  alt="Sculptique lymphatic drainage bottle"
+                  className="absolute inset-0 h-auto lg:h-[588px] w-full object-cover rounded-lg"
                   loading="lazy"
                 />
-              </div>
-            ))}
-          </div>
 
-          <div className="mt-5 grid w-full grid-cols-3 gap-4">
-            {GRID_IMAGES_3COL.map((img, idx) => (
-              <div
-                key={idx}
-                className="overflow-hidden rounded-2xl bg-white shadow-sm"
-              >
-                <img
-                  src={img}
-                  alt=""
-                  className="w-full lg:w-[185px] lg:h-[185px] object-cover "
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
+                <div className="absolute right-3 top-3 lg:right-4 lg:top-4">
+                  <img
+                    src={NYSALE_BADGE}
+                    alt="New Years Sale"
+                    className="h-20 w-20 lg:h-[120px] lg:w-[120px] object-contain"
+                    loading="lazy"
+                  />
+                </div>
 
-          <div className="mt-4 grid w-full grid-cols-2 gap-4">
-            {[
-              "https://trysculptique.com/cdn/shop/files/tiredness-min.png?v=1758713216",
-              "https://trysculptique.com/cdn/shop/files/puffiness-min.png?v=1758713216",
-            ].map((img, idx) => (
-              <div
-                key={idx}
-                className="overflow-hidden rounded-2xl bg-white shadow-sm"
-              >
-                <img
-                  src={img}
-                  alt="Customer results statistics"
-                  className="w-full object-cover"
-                  loading="lazy"
-                />
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 lg:bottom-7">
+                  <button className="inline-flex border border-black items-center rounded-full bg-white/98 px-4 py-1 backdrop-blur-lg transition bg-[#ffffffd9]/80 hover:opacity-85 lg:gap-2 lg:text-lg lg:px-6 lg:py-2">
+                    <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center lg:h-7 lg:w-7">
+                      <img
+                        src={NUTRITION_ICON}
+                        alt=""
+                        className="h-4 w-4 lg:h-6 lg:w-6"
+                        loading="lazy"
+                      />
+                    </span>
+                    <span className="whitespace-nowrap font-serif text-sm text-sculptique-secondary">
+                      Nutritional Information
+                    </span>
+                  </button>
+                </div>
               </div>
-            ))}
+            </div>
+
+            <div className="lg:mt-5 grid w-full grid-cols-2 gap-4">
+              {GRID_IMAGES_2COL.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="overflow-hidden rounded-2xl bg-white shadow-sm"
+                >
+                  <img
+                    src={img}
+                    alt=""
+                    className="h-[286px] w-[286px] object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-5 grid w-full grid-cols-3 gap-4">
+              {GRID_IMAGES_3COL.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="overflow-hidden rounded-2xl bg-white shadow-sm"
+                >
+                  <img
+                    src={img}
+                    alt=""
+                    className="w-full lg:w-[185px] lg:h-[185px] object-cover "
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-4 grid w-full grid-cols-2 gap-4">
+              {OTHER_IMAGES.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="overflow-hidden rounded-2xl bg-white shadow-sm"
+                >
+                  <img
+                    src={img}
+                    alt="Customer results statistics"
+                    className="w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

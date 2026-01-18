@@ -289,7 +289,7 @@ const ReviewsSection = () => {
             <div className="hidden lg:block w-[1px] bg-sculptique-pink/10 h-24 self-center mx-4"></div>
 
             <div className="flex-1 w-full lg:w-auto flex flex-col justify-center items-center lg:items-end py-8 ">
-              <button className="w-full lg:w-auto px-16 py-[10px] text-base bg-sculptique-pink text-white font-montserrat font-bold rounded-sm hover:bg-opacity-90 transition shadow-sm">
+              <button className="w-full lg:w-auto px-16 py-[10px] font-bold text-base bg-sculptique-pink text-white font-montserrat rounded-sm hover:bg-opacity-90 transition shadow-sm">
                 Write a review
               </button>
             </div>
@@ -302,6 +302,7 @@ const ReviewsSection = () => {
             alt="Diamond Authenticity"
             className="h-20"
           />
+          <span className="text-sculptique-blue font-nunito font-bold text-xs mt-1">100.0</span>
         </div>
 
         <div className="mb-6 relative border-y border-sculptique-pink/10 py-3">

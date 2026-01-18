@@ -27,12 +27,12 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="bg-sculptique-yellow py-12">
+    <section className="bg-sculptique-yellow py-8">
       <div className="container mx-auto px-4 max-w-page">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 gap-y-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 gap-y-4 lg:gap-y-12">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <div className="mb-4 h-12 flex items-center justify-center">
+              <div className="mb-2 h-12 flex items-center justify-center">
                 <img 
                   src={feature.imgSrc} 
                   alt={feature.alt} 
@@ -41,8 +41,8 @@ const FeaturesSection = () => {
                   className="w-10 h-10 object-contain"
                 />
               </div>
-              <h3 className="font-semibold text-lg mb-2 leading-tight">{feature.title}</h3>
-              <p className="text-gray-700 text-sm">{feature.description}</p>
+              <h3 className="font-semibold font-nunito text-base mb-2 leading-[1.3]">{feature.title}</h3>
+              <p className="font-nunito font-medium text-base">{feature.description}</p>
             </div>
           ))}
         </div>

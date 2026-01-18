@@ -8,7 +8,7 @@ const ExpertSection = () => {
               July 4th, 2025
             </span>
 
-            <h2 className="mb-8 font-lora text-3xl leading-tight text-sculptique-text sm:text-4xl lg:text-[32px]">
+            <h2 className="mb-8 font-lora text-3xl leading-tight text-sculptique-text lg:text-[32px]">
               Expert Advice from Dr. Emily Chen of a Premier New York Skin
               Clinic
             </h2>
