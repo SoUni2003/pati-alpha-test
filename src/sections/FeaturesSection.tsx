@@ -1,11 +1,8 @@
-import React from 'react';
-
 const FeaturesSection = () => {
   return (
     <section className="bg-sculptique-yellow py-12">
       <div className="container mx-auto px-4 max-w-[1200px]">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 gap-y-12">
-          {/* Feature 1 */}
           <div className="flex flex-col items-center text-center">
             <div className="mb-4 h-12 flex items-center justify-center">
               <img 
@@ -20,7 +17,6 @@ const FeaturesSection = () => {
             <p className="text-gray-700 text-sm">On all orders</p>
           </div>
 
-          {/* Feature 2 */}
           <div className="flex flex-col items-center text-center">
              <div className="mb-4 h-12 flex items-center justify-center">
               <img 
@@ -35,7 +31,6 @@ const FeaturesSection = () => {
              <p className="text-gray-700 text-sm">Promotes healthy immune cell functions</p>
           </div>
 
-           {/* Feature 3 */}
            <div className="flex flex-col items-center text-center">
              <div className="mb-4 h-12 flex items-center justify-center">
               <img 
@@ -51,7 +46,6 @@ const FeaturesSection = () => {
            </div>
 
 
-          {/* Feature 4 */}
           <div className="flex flex-col items-center text-center">
             <div className="mb-4 h-12 flex items-center justify-center">
               <img 
