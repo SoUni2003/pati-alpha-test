@@ -71,22 +71,21 @@ const IngredientsSection = () => {
   };
 
   return (
-    <section className="bg-[#f3eee0] py-16 sm:py-20 overflow-hidden">
-      <div className="mx-auto w-full max-w-[1300px] px-4 md:px-6">
+    <section className="py-8">
+     <div className="bg-[#f3eee0] py-16 overflow-hidden">
+       <div className="mx-auto w-full max-w-page px-4 md:px-6">
         
-        {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-14">
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[46px] leading-tight text-sculptique-text mb-6">
+        <div className="text-center max-w-[800px] mx-auto mb-14">
+            <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center mb-4">
                 <span className="text-sculptique-green">The 8-Ingredient System</span> That Restores What Hormones Once Maintained
             </h2>
-            <p className="font-sans text-base sm:text-lg text-sculptique-text leading-relaxed max-w-3xl mx-auto">
+            <p className="font-nunito text-base lg:text-lg text-sculptique-text font-medium leading-relaxed mx-auto">
                 Sculptique is the only formula that addresses ALL 6 mechanisms of lymphatic dysfunction simultaneously—not with symbolic doses, but with therapeutic amounts based on clinical research.
                 <br className="hidden md:block"/>
                 Not just moving fluid temporarily. Not just reducing inflammation. <span className="font-bold">Complete restoration.</span>
             </p>
         </div>
 
-        {/* Ingredients Grid */}
         <div className="bg-black border border-black rounded-lg sm:rounded-2xl overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px]">
                 {INGREDIENTS.map((ingredient, idx) => (
@@ -95,17 +94,14 @@ const IngredientsSection = () => {
                         className="bg-white p-6 md:p-8 flex flex-col items-center text-center h-full cursor-pointer hover:bg-gray-50 transition-colors"
                         onClick={() => toggleAccordion(idx)}
                     >
-                        {/* Benefit + Checkmark */}
                         <div className="flex items-center gap-2 mb-4 w-full justify-center">
-                            <svg className="w-4 h-4 text-sculptique-green flex-shrink-0" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M13.4854 4.09348C13.7915 4.36555 13.8207 4.83592 13.551 5.14476L7.40816 12.1804C7.12909 12.5 6.6432 12.5323 6.32356 12.2532L2.44856 8.8682C2.15839 8.61476 2.12921 8.1746 2.38265 7.88443C2.63609 7.59427 3.07625 7.56509 3.36642 7.81853L6.72659 10.7533L12.4341 4.15908C12.7038 3.85024 13.1793 3.8214 13.4854 4.09348Z" />
-                            </svg>
-                            <span className="text-[13px] font-bold text-sculptique-green uppercase tracking-wide leading-none">{ingredient.benefit}</span>
+                            <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/check-mark_17013456_2.png?v=1760698419" alt="" className="w-4 h-4" />
+                            <span className="text-base font-nunito text-sculptique-green">{ingredient.benefit}</span>
                         </div>
 
                         {/* Image */}
-                        <div className="w-full h-32 md:h-36 mb-4 flex items-center justify-center">
-                             <img src={ingredient.image} alt={ingredient.name} className="w-auto h-full max-h-full object-contain" />
+                        <div className="w-full h-full mb-4 flex items-center justify-center">
+                             <img src={ingredient.image} alt={ingredient.name} className="w-auto h-20 object-contain" />
                         </div>
 
                         {/* Name + Dosage + Chevron */}
@@ -145,6 +141,7 @@ const IngredientsSection = () => {
         </div>
 
       </div>
+     </div>
     </section>
   );
 };

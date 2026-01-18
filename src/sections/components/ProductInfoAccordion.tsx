@@ -114,7 +114,7 @@ const ACCORDION_ITEMS = [
 ];
 
 const ProductInfoAccordion = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>();
 
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -188,11 +188,7 @@ const ProductInfoAccordion = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <MoneyBackGuarantee 
-          className="flex items-center gap-3"
-          iconClassName="h-6 w-6 object-contain"
-          textClassName="text-base font-nunito font-medium text-sculptique-text"
-        />
+        <MoneyBackGuarantee />
         <div className="flex items-center gap-3">
           <img
             src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_1000003293.png?v=1752066864"

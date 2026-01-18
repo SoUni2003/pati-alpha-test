@@ -112,10 +112,7 @@ const FAQSection = () => {
             <button className="w-full sm:w-auto min-w-[320px] rounded bg-black px-8 py-4 text-lg font-bold text-white transition hover:bg-gray-900">
                 Try Lymphatic Drainage Risk-Free
             </button>
-            <MoneyBackGuarantee 
-              className="flex items-center gap-2 text-sm sm:text-base text-sculptique-text" 
-              iconClassName="w-5 h-5 object-contain"
-            />
+            <MoneyBackGuarantee />
         </div>
       </div>
     </section>

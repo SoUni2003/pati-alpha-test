@@ -204,10 +204,9 @@ const VideoCarousel = () => {
                 Try Lymphatic Drainage Risk-Free
             </a>
             
-            <MoneyBackGuarantee 
-                className="flex items-center gap-3 mt-6 text-[#1f2024]" 
-                textClassName="text-base font-medium" 
-            />
+            <div className="mt-6 flex justify-center">
+                <MoneyBackGuarantee />
+            </div>
         </div>
 
       </div>
