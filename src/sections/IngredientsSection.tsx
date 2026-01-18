@@ -2,57 +2,49 @@ import { useState } from "react";
 
 const INGREDIENTS = [
   {
-    name: "Cleavers Extract",
-    dosage: "100mg",
+    name: "Cleavers Extract (100mg)",
     benefit: "Reactivate Lymphatic Pumps",
     image: "https://trysculptique.com/cdn/shop/files/Frame_1484580382.png?v=1760698909",
     description: "Restores rhythmic vessel contractions that move lymph through your system. Contains iridoids that \"wake up\" muscle cells in vessel walls. 2024 study showed enhanced immune cell activity for better waste clearance. [Study: Enhanced NK cell activity in immunosuppressed models]",
   },
   {
-    name: "Dandelion Extract",
-    dosage: "250mg",
+    name: "Dandelion Extract (250mg)",
     benefit: "Flush Excess Fluid",
     image: "https://trysculptique.com/cdn/shop/files/Frame_1484580382_1.png?v=1760939908",
     description: "Proven gentle diuretic that increases fluid excretion without harsh side effects. Human trial showed statistically significant increase in urination frequency (p<0.05) and excretion ratio (p<0.001). [Study: First human pilot study on diuretic effects]",
   },
   {
-    name: "Bromelain Powder",
-    dosage: "100mg",
+    name: "Bromelain Powder (100mg)",
     benefit: "Break Down Protein Clogs",
     image: "https://trysculptique.com/cdn/shop/files/image_2.png?v=1760939909", 
     description: "Enzymatically breaks down the protein complexes that clog lymphatic vessels, allowing fluid to flow freely again. Acts as a biologicalèa pipe cleaner for your lymphatic system.",
   },
   {
-    name: "Rutin",
-    dosage: "100mg",
+    name: "Rutin (100mg)",
     benefit: "Strengthen Vessel Walls",
     image: "https://trysculptique.com/cdn/shop/files/image_3.png?v=1760939909", 
     description: "A powerful bioflavonoid that reinforces the structural integrity of lymphatic capillaries, reducing permeability and preventing fluid from leaking back into tissues.",
   },
   {
-    name: "Burdock Root Powder",
-    dosage: "200mg",
+    name: "Burdock Root Powder (200mg)",
     benefit: "Reduce Inflammation",
     image: "https://trysculptique.com/cdn/shop/files/Frame_1484580382_2.png?v=1760939909",
     description: "Potent anti-inflammatory that calms swollen tissues, reducing pressure on lymphatic vessels and facilitating easier drainage.",
   },
   {
-    name: "Echinacea Purpurea Extract",
-    dosage: "500mg",
+    name: "Echinacea Purpurea Extract (500mg)",
     benefit: "Boost Immune Clearance",
     image: "https://trysculptique.com/cdn/shop/files/image_4.png?v=1760939909", 
     description: "Enhances macrophage activity to engulf and clear cellular waste products and toxins that stagnate in a sluggish lymphatic system.",
   },
   {
-    name: "Kelp Extract",
-    dosage: "30mg",
+    name: "Kelp Extract (30mg)",
     benefit: "Support Metabolism",
     image: "https://trysculptique.com/cdn/shop/files/Frame_1484580382_3.png?v=1760939909",
     description: "Rich in iodine to support thyroid function and metabolic rate, ensuring your body has the energy required to drive lymphatic circulation.",
   },
   {
-    name: "Lemon Powder",
-    dosage: "50mg",
+    name: "Lemon Powder (50mg)",
     benefit: "Antioxidant Protection",
     image: "https://trysculptique.com/cdn/shop/files/Frame_1484580382_4.png?v=1760939910",
     description: "Provides high levels of Vitamin C and flavonoids to protect lymphatic vessels from oxidative stress and free radical damage.",
@@ -91,37 +83,33 @@ const IngredientsSection = () => {
                 {INGREDIENTS.map((ingredient, idx) => (
                     <div 
                         key={idx} 
-                        className="bg-white p-6 md:p-8 flex flex-col items-center text-center h-full cursor-pointer hover:bg-gray-50 transition-colors"
+                        className="bg-white p-6 flex flex-col items-center text-center h-full cursor-pointer hover:bg-gray-50 transition-colors"
                         onClick={() => toggleAccordion(idx)}
                     >
                         <div className="flex items-center gap-2 mb-4 w-full justify-center">
                             <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/check-mark_17013456_2.png?v=1760698419" alt="" className="w-4 h-4" />
-                            <span className="text-base font-nunito text-sculptique-green">{ingredient.benefit}</span>
+                            <span className="text-base font-nunito text-[#0c7c00]">{ingredient.benefit}</span>
                         </div>
 
-                        {/* Image */}
-                        <div className="w-full h-full mb-4 flex items-center justify-center">
-                             <img src={ingredient.image} alt={ingredient.name} className="w-auto h-20 object-contain" />
+                        <div className="w-full  flex items-center justify-center">
+                             <img src={ingredient.image} alt={ingredient.name} className="w-auto h-20 min-h-20 object-contain" />
                         </div>
 
-                        {/* Name + Dosage + Chevron */}
                         <div className="w-full flex items-center justify-between pt-2">
                              <div className="text-left">
-                                 <h3 className="font-serif text-lg text-sculptique-text leading-tight">{ingredient.name}</h3>
-                                 <p className="font-sans text-sm text-gray-500">({ingredient.dosage})</p>
+                                 <h3 className="font-trirong text-base font-semibold text-sculptique-text leading-[1.3]">{ingredient.name}</h3>
                              </div>
                              <svg 
-                                className={`w-5 h-5 text-gray-400 transform transition-transform duration-300 ${expandedIndices.includes(idx) ? 'rotate-180' : ''}`} 
+                                className={`w-5 h-5  transform transition-transform duration-300 ${expandedIndices.includes(idx) ? 'rotate-180' : ''}`} 
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor"
                              >
                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                              </svg>
                         </div>
 
-                        {/* Expanded Content */}
                         <div className={`grid transition-all duration-500 ease-in-out w-full text-left ${expandedIndices.includes(idx) ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                              <div className="overflow-hidden">
-                                <p className="text-[13px] leading-relaxed text-gray-700 pt-4">
+                                <p className="text-sm font-nunito font-medium leading-[1.3] pt-3">
                                     {ingredient.description}
                                 </p>
                              </div>
@@ -131,8 +119,7 @@ const IngredientsSection = () => {
             </div>
         </div>
 
-        {/* Synergistic Effect Section */}
-        <div className="mt-8 md:mt-12 max-w-[800px] mx-auto">
+        <div className="mt-8 md:mt-12 max-w-[580px] mx-auto">
              <img 
                  src="https://trysculptique.com/cdn/shop/files/Frame_1000003583_2.png?v=1760697982" 
                  alt="The Synergistic Effect"
