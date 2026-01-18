@@ -17,7 +17,7 @@ export default {
         'sculptique-green': '#039869',
         'sculptique-cream': '#f8f6f1',
         'sculptique-text': '#000000',
-        'sculptique-muted': '#4a4a4a',
+        'sculptique-muted': '#737373',
         'sculptique-accent': '#e11d48',
         'sculptique-secondary': '#000000bf',
         'sculptique-yellow': '#f3eee0',

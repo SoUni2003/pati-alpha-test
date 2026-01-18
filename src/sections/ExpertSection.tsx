@@ -1,19 +1,22 @@
+import MainButton from "../components/MainButton";
+import MoneyBackGuarantee from "../components/MoneyBackGuarantee";
+
 const ExpertSection = () => {
   return (
-    <section className="bg-white py-12 md:py-16">
-      <div className="mx-auto w-full max-w-[1248px] px-4 lg:px-0">
-        <div className="flex flex-col-reverse overflow-hidden rounded-[32px] bg-[#F8F8F8] md:flex-row">
-          <div className="flex w-full flex-col justify-center p-6 sm:p-10 lg:p-8 md:w-[48%]">
-            <span className="mb-4 text-sm font-medium text-gray-500 uppercase tracking-wide">
+    <section className="bg-white py-8 lg:py-16">
+      <div className="mx-auto w-full max-w-page px-4 lg:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-lg bg-[#F8F8F8]">
+          <div className="flex w-full flex-col justify-center p-4  lg:p-8 order-2 md:order-1">
+            <span className="mb-4 text-base font-nunito font-medium text-sculptique-muted leading-[1.3]">
               July 4th, 2025
             </span>
 
-            <h2 className="mb-8 font-lora text-3xl leading-tight text-sculptique-text lg:text-[32px]">
+            <h2 className="mb-4 font-lora text-3xl font-medium leading-tight text-sculptique-text lg:text-[32px]">
               Expert Advice from Dr. Emily Chen of a Premier New York Skin
               Clinic
             </h2>
 
-            <div className="space-y-6 text-base leading-relaxed text-gray-700 sm:text-lg">
+            <div className="space-y-2 font-nunito text-base leading-[1.3] lg:text-lg">
               <p>
                 “Your nutrition plays a powerful role in your appearance. If
                 your body is missing key vitamins and nutrients, it can’t
@@ -29,29 +32,21 @@ const ExpertSection = () => {
               </p>
             </div>
 
-            <div className="mt-10 flex flex-col items-start gap-6">
-              <button className="rounded bg-black px-8 py-4 text-center text-base font-bold text-white transition hover:bg-gray-800 w-full sm:w-auto">
-                Try Lymphatic Drainage Risk-Free
-              </button>
+            <div className="mt-4 flex flex-col items-start gap-4">
+              
+               <MainButton title="Try Lymphatic Drainage Risk-Free" to="https://pay.trysculptique.com/lymphatic/checkout" />
 
-              <div className="flex items-center gap-3">
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/60-days_11622780_1.png?v=1752066864"
-                  alt=""
-                  className="h-6 w-6 object-contain"
-                />
-                <span className="text-sm font-medium text-gray-900">
-                  60-Day Money-Back Guarantee
-                </span>
+              <div className="w-full flex items-center justify-center">
+                <MoneyBackGuarantee  />
               </div>
             </div>
           </div>
 
-          <div className="relative min-h-[400px] w-full bg-[#F3EEE0] md:h-[551px] md:w-[52%]">
+          <div className="relative w-full lg:w-full bg-[#F3EEE0] min-h-[345px] lg:min-h-[400px] h-full order-1 md:order-2 rounded-lg overflow-hidden">
             <img
               src="https://trysculptique.com/cdn/shop/files/greendeskt-min.png?v=1758713213"
               alt="Dr. Emily Chen"
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>
