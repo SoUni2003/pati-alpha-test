@@ -213,7 +213,7 @@ const ReviewsSection = () => {
             />
           </div>
           <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center font-medium">
-            Real Women, Real Results: 93,000+ Transformations
+            Real Women, Real Results: 93,000+ <br /> Transformations
           </h2>
           <p className="mt-3 font-nunito text-base lg:text-lg text-sculptique-text">
             All reviews verified from actual paying customers
