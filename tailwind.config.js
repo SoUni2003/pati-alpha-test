@@ -21,6 +21,7 @@ export default {
         'sculptique-accent': '#e11d48',
         'sculptique-secondary': '#000000bf',
         'sculptique-yellow': '#f3eee0',
+        'sculptique-blue': '#4c8eda',
         'sculptique-primary': '#000000',
         'sculptique-pink': '#FA8A8A',
       },
