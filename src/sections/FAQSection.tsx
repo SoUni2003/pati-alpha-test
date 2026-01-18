@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MoneyBackGuarantee from "../components/MoneyBackGuarantee";
+import MainButton from "../components/MainButton";
 
 const FAQS = [
   {
@@ -58,32 +59,31 @@ const FAQSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-white py-10 sm:py-16 lg:py-24">
-      <div className="mx-auto w-full max-w-[900px] px-4 sm:px-6">
-        <div className="rounded-2xl bg-sculptique-yellow p-6 sm:px-10 sm:py-14 md:px-16 md:py-16">
-          <h2 className="mb-12 text-center font-serif text-3xl leading-snug text-sculptique-text sm:text-4xl lg:text-[42px]">
+    <section className="bg-white px-4 lg:px-0 py-8 lg:py-[56px]">
+      <div className=" w-full">
+        <div className="rounded-2xl py-4">
+          <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3rem] text-center  mb-4">
             Frequently Asked Questions
           </h2>
 
-          <div className="">
+          <div className="max-w-[824px] mx-auto bg-gradient-to-b from-white to-sculptique-yellow p-4 lg:p-8">
             {FAQS.map((faq, idx) => (
-              <div key={idx} className="border-b border-white/40">
+              <div key={idx} className="border-b border-white/40 lg:px-5">
                 <button
                   onClick={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
-                  className="flex w-full items-start justify-between py-5 text-left sm:items-center"
+                  className="flex w-full items-center justify-between py-5 text-left sm:items-center"
                 >
                   <h3 className="pr-4 font-sans text-lg text-sculptique-text sm:text-[19px]">
                     {faq.question}
                   </h3>
                   <svg
-                    className={`h-5 w-5 flex-shrink-0 text-sculptique-text transition-transform duration-300 ${
+                    className={`h-4 w-4 flex-shrink-0 text-sculptique-text transition-transform duration-300 ${
                       expandedIndex === idx ? "rotate-180" : ""
                     }`}
                     fill="currentColor"
                     viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    {/* Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc. */}
                     <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
                   </svg>
                 </button>
@@ -108,10 +108,8 @@ const FAQSection = () => {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 text-center">
-            <button className="w-full sm:w-auto min-w-[320px] rounded bg-black px-8 py-4 text-lg font-bold text-white transition hover:bg-gray-900">
-                Try Lymphatic Drainage Risk-Free
-            </button>
+        <div className="mt-2 flex flex-col items-center justify-center gap-4 text-center">
+            <MainButton title="Try Lymphatic Drainage Risk-Free" to="https://pay.trysculptique.com/lymphatic/checkout" />
             <MoneyBackGuarantee />
         </div>
       </div>

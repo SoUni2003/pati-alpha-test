@@ -7,7 +7,7 @@ const ExpertSection = () => {
       <div className="mx-auto w-full max-w-page px-4 lg:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-lg bg-[#F8F8F8]">
           <div className="flex w-full flex-col justify-center p-4  lg:p-8 order-2 md:order-1">
-            <span className="mb-4 text-base font-nunito font-medium text-sculptique-muted leading-[1.3]">
+            <span className="mb-4 text-base font-nunito font-medium text-sculptique-muted leading-[1.3rem]">
               July 4th, 2025
             </span>
 
@@ -16,7 +16,7 @@ const ExpertSection = () => {
               Clinic
             </h2>
 
-            <div className="space-y-2 font-nunito text-base leading-[1.3] lg:text-lg">
+            <div className="space-y-2 font-nunito text-base leading-[1.3rem] lg:text-lg">
               <p>
                 “Your nutrition plays a powerful role in your appearance. If
                 your body is missing key vitamins and nutrients, it can’t

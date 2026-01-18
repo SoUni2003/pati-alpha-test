@@ -1,6 +1,10 @@
 import React from 'react';
 
-const MoneyBackGuarantee: React.FC = () => {
+interface MoneyBackGuaranteeProps {
+  bold?: boolean;
+}
+
+const MoneyBackGuarantee: React.FC<MoneyBackGuaranteeProps> = ({ bold = false }) => {
   return (
     <div className="flex items-center gap-2">
       <img
@@ -9,7 +13,7 @@ const MoneyBackGuarantee: React.FC = () => {
         className="h-8 w-8 object-contain"
         loading="lazy"
       />
-      <span className="text-base font-nunito font-bold text-sculptique-text">60-Day Money-Back Guarantee</span>
+      <span className={`text-base font-nunito text-sculptique-text ${bold ? 'font-bold' : 'font-medium'}`}>60-Day Money-Back Guarantee</span>
     </div>
   );
 };

@@ -97,7 +97,7 @@ const SymptomsSection = () => {
 
         <div className="mt-3 lg:mt-4 lg:max-w-[920px] mx-auto">
           <div className="text-center mb-10">
-            <h2 className="font-lora text-2xl lg:text-[42px] text-sculptique-text lg:leading-[1.3]">
+            <h2 className="font-lora text-2xl lg:text-[42px] text-sculptique-text lg:leading-[1.3rem]">
               The Connection{" "}
               <span className="text-sculptique-green">You've Been Missing</span>
             </h2>
@@ -124,7 +124,7 @@ const SymptomsSection = () => {
               alt=""
               className="w-[34px] lg:w-[46px] h-[46px] lg:h-[65px] object-cover mx-auto"
             />
-            <h2 className="font-lora text-2xl lg:text-[42px] text-sculptique-text lg:leading-[1.3]">
+            <h2 className="font-lora text-2xl lg:text-[42px] text-sculptique-text lg:leading-[1.3rem]">
               Your{" "}
               <span className="text-sculptique-green">
                 Hidden Drainage System
@@ -134,7 +134,7 @@ const SymptomsSection = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[100px] items-center">
             <div className="space-y-1.5">
-              <p className="font-nunito text-base lg:text-lg text-sculptique-text leading-[1.3]">
+              <p className="font-nunito text-base lg:text-lg text-sculptique-text leading-[1.3rem]">
                 Your lymphatic system is your body's internal cleaning crew—a
                 network of vessels that processes{" "}
                 <span className="font-bold">

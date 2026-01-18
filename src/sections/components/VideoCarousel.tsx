@@ -125,7 +125,7 @@ const VideoCarousel = () => {
               className="mb-4 h-11 object-contain" 
               alt="Trustpilot Reviews" 
             />
-            <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center font-medium">
+            <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3rem] text-center">
               See The Stories of Sculptique™ Women Firsthand
             </h2>
         </div>

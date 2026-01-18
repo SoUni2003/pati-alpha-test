@@ -41,7 +41,7 @@ const FeaturesSection = () => {
                   className="w-10 h-10 object-contain"
                 />
               </div>
-              <h3 className="font-semibold font-nunito text-base mb-2 leading-[1.3]">{feature.title}</h3>
+              <h3 className="font-semibold font-nunito text-base mb-2 leading-[1.3rem]">{feature.title}</h3>
               <p className="font-nunito font-medium text-base">{feature.description}</p>
             </div>
           ))}

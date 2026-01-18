@@ -23,7 +23,7 @@ const WhyNothingWorkedSection = () => {
   return (
     <section className="bg-sculptique-yellow py-1 overflow-hidden">
       <div className="mx-auto w-full max-w-page px-4 sm:px-6 relative">
-        <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center mb-4 lg:mb-10">
+        <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3rem] text-center mb-4 lg:mb-10">
           Why Nothing Has <span className="text-sculptique-green">Worked</span>
         </h2>
 
@@ -41,7 +41,7 @@ const WhyNothingWorkedSection = () => {
               </div>
 
               <div className="flex flex-col items-center text-center flex-grow p-6">
-                 <h3 className="font-trirong text-xl leading-[1.3] font-medium text-sculptique-text mb-5 px-1 min-h-[3rem] flex items-center justify-center">
+                 <h3 className="font-trirong text-xl leading-[1.3rem] font-medium text-sculptique-text mb-5 px-1 min-h-[3rem] flex items-center justify-center">
                     {reason.title}
                  </h3>
 
@@ -65,7 +65,7 @@ const WhyNothingWorkedSection = () => {
 
         <div className="flex flex-col items-center mt-4 lg:mt-6 gap-5 mb-16">
             <MainButton title="Try Lymphatic Drainage Risk-Free" to="https://pay.trysculptique.com/lymphatic/checkout" />
-            <MoneyBackGuarantee  />
+            <MoneyBackGuarantee bold  />
         </div>
       </div>
     </section>
