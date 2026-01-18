@@ -68,7 +68,7 @@ const IngredientsSection = () => {
        <div className="mx-auto w-full max-w-page px-4 md:px-6">
         
         <div className="text-center max-w-[800px] mx-auto mb-14">
-            <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3rem] text-center mb-4">
+            <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center mb-4">
                 <span className="text-sculptique-green">The 8-Ingredient System</span> That Restores What Hormones Once Maintained
             </h2>
             <p className="font-nunito text-base lg:text-lg text-sculptique-text font-medium leading-relaxed mx-auto">
@@ -98,7 +98,7 @@ const IngredientsSection = () => {
     
                             <div className="flex-1 w-full flex items-center justify-between lg:pt-2 pl-3 md:pl-0">
                                  <div className="text-left">
-                                     <h3 className="font-trirong text-base font-semibold text-sculptique-text leading-[1.3rem]">{ingredient.name}</h3>
+                                     <h3 className="font-trirong text-base font-semibold text-sculptique-text leading-[1.3]">{ingredient.name}</h3>
                                  </div>
                                  <svg 
                                     className={`w-5 h-5 shrink-0 transform transition-transform duration-300 ${expandedIndices.includes(idx) ? 'rotate-180' : ''}`} 
@@ -111,7 +111,7 @@ const IngredientsSection = () => {
 
                         <div className={`grid transition-all duration-500 ease-in-out w-full text-left ${expandedIndices.includes(idx) ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                              <div className="overflow-hidden">
-                                <p className="text-sm font-nunito font-medium leading-[1.3rem] pt-3">
+                                <p className="text-sm font-nunito font-medium leading-[1.3] pt-3">
                                     {ingredient.description}
                                 </p>
                              </div>

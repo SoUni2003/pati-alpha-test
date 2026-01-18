@@ -231,7 +231,7 @@ const ProductInfoAccordion = () => {
         <h3 className="mt-4 font-nunito text-lg font-medium leading-tight text-sculptique-text">
           Even my husband noticed... the spark came back.
         </h3>
-        <p className="mt-2 font-nunito font-medium text-base leading-[1.3rem] ">
+        <p className="mt-2 font-nunito font-medium text-base leading-[1.3] ">
           After years of hiding under coverups, picking apart my body, and
           feeling disconnected, I finally feel at ease again. I feel less
           bloated, lighter, like my body is working with me not against me.

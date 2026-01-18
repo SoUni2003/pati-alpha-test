@@ -212,7 +212,7 @@ const ReviewsSection = () => {
               className="h-[19px]"
             />
           </div>
-          <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3rem] text-center">
+          <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center">
             Real Women, Real Results: 93,000+ <br /> Transformations
           </h2>
           <p className="mt-3 font-nunito text-base lg:text-lg text-sculptique-text">
