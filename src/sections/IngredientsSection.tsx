@@ -78,12 +78,12 @@ const IngredientsSection = () => {
             </p>
         </div>
 
-        <div className="bg-black border border-black rounded-lg sm:rounded-2xl overflow-hidden">
+        <div className="bg-black border border-black rounded-lg lg:rounded-2xl overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px]">
                 {INGREDIENTS.map((ingredient, idx) => (
                     <div 
                         key={idx} 
-                        className="bg-white p-6 flex flex-col items-center text-center h-full cursor-pointer hover:bg-gray-50 transition-colors"
+                        className="bg-white p-3 lg:p-6 flex flex-col items-center text-center h-full cursor-pointer hover:bg-gray-50 transition-colors"
                         onClick={() => toggleAccordion(idx)}
                     >
                         <div className="flex items-center gap-2 mb-4 w-full justify-center">
@@ -91,20 +91,22 @@ const IngredientsSection = () => {
                             <span className="text-base font-nunito text-[#0c7c00]">{ingredient.benefit}</span>
                         </div>
 
-                        <div className="w-full  flex items-center justify-center">
-                             <img src={ingredient.image} alt={ingredient.name} className="w-auto h-20 min-h-20 object-contain" />
-                        </div>
-
-                        <div className="w-full flex items-center justify-between pt-2">
-                             <div className="text-left">
-                                 <h3 className="font-trirong text-base font-semibold text-sculptique-text leading-[1.3]">{ingredient.name}</h3>
+                        <div className="w-full flex flex-row lg:flex-col items-center gap-3 lg:gap-0">
+                             <div className="shrink-0 lg:w-full lg:flex lg:items-center lg:justify-center">
+                                <img src={ingredient.image} alt={ingredient.name} className="w-[60px] h-10 lg:w-auto lg:h-20 lg:min-h-20 object-cover" />
                              </div>
-                             <svg 
-                                className={`w-5 h-5  transform transition-transform duration-300 ${expandedIndices.includes(idx) ? 'rotate-180' : ''}`} 
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                             >
-                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                             </svg>
+    
+                            <div className="flex-1 w-full flex items-center justify-between lg:pt-2 pl-3 md:pl-0">
+                                 <div className="text-left">
+                                     <h3 className="font-trirong text-base font-semibold text-sculptique-text leading-[1.3]">{ingredient.name}</h3>
+                                 </div>
+                                 <svg 
+                                    className={`w-5 h-5 shrink-0 transform transition-transform duration-300 ${expandedIndices.includes(idx) ? 'rotate-180' : ''}`} 
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                 >
+                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                 </svg>
+                            </div>
                         </div>
 
                         <div className={`grid transition-all duration-500 ease-in-out w-full text-left ${expandedIndices.includes(idx) ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
@@ -121,9 +123,14 @@ const IngredientsSection = () => {
 
         <div className="mt-8 md:mt-12 max-w-[580px] mx-auto">
              <img 
+                 src="https://trysculptique.com/cdn/shop/files/Frame_1000003583_3.png?v=1760697982" 
+                 alt="The Synergistic Effect"
+                 className="w-full h-auto md:hidden"
+             />
+             <img 
                  src="https://trysculptique.com/cdn/shop/files/Frame_1000003583_2.png?v=1760697982" 
                  alt="The Synergistic Effect"
-                 className="w-full h-auto"
+                 className="w-full h-auto hidden md:block"
              />
         </div>
 
