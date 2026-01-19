@@ -24,6 +24,20 @@ This project is built using modern front-end technologies to ensure performance,
 -   **Interactive Components**: Functional sliders/carousels and hover states.
 -   **Clean Architecture**: Modular component structure and organized file system.
 
+## Performance & Optimization
+
+High performance and SEO optimization were key priorities during development.
+
+![Lighthouse Performance Score](./public/lighthouse-score.jpg)
+
+-   **High Lighthouse Scores**: Achieved 100/100 SEO and excellent Performance scores.
+-   **SEO Configuration**:
+    -   Added comprehensive Meta Tags (Title, Description) for search visibility.
+    -   Configured [Open Graph](https://ogp.me/) and Twitter Card tags for social media sharing.
+    -   Valid `robots.txt` and `sitemap.xml` generated.
+    -   Custom Favicon implementation.
+-   **Asset Optimization**: Localized critical assets for faster loading times.
+
 ## Getting Started
 
 Follow these instructions to set up and run the project locally.
