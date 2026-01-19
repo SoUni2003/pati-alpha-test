@@ -110,12 +110,12 @@ const BundlesSection = () => {
                       </span>
                       <div>
                         <h3 className='text-base font-semibold text-sculptique-text'>{bundle.title}</h3>
-                        <p className='mt-0.5 text-[10px] lg:text-xs font-medium'>{bundle.subtitle}</p>
+                        <p className='mt-0.5 text-xs font-medium'>{bundle.subtitle}</p>
                       </div>
                     </div>
                     <div className='text-right'>
-                      <p className='leading-none font-semibold text-sculptique-text text-base'>{bundle.price}</p>
-                      <p className='text-xs text-sculptique-secondary line-through lg:text-sm'>{bundle.compareAt}</p>
+                      <p className='font-semibold text-sculptique-text text-base leading-[1.3]'>{bundle.price}</p>
+                      <p className='text-sm text-sculptique-secondary line-through lg:text-sm leading-[1.3]'>{bundle.compareAt}</p>
                     </div>
                   </div>
 
@@ -125,12 +125,12 @@ const BundlesSection = () => {
                         <li
                           key={benefit.text}
                           className={`relative flex items-center gap-2 px-3 py-1 text-xs font-semibold text-white sm:text-sm ${
-                            selected ? 'bg-sculptique-green' : 'bg-sculptique-green/80'
+                            selected ? 'bg-sculptique-green' : 'bg-sculptique-green/70'
                           }`}>
-                          <span className='flex h-8 w-8 items-center justify-center rounded-full bg-white/18'>
-                            <img src={benefit.icon} alt='' className='h-8 w-8' loading='lazy' />
+                          <span className='flex h-[30px] sm:h-8 w-[30px] sm:w-8 items-center justify-center rounded-full bg-white/18'>
+                            <img src={benefit.icon} alt='' className='h-full w-full' loading='lazy' />
                           </span>
-                          <span className='flex-1 leading-tight'>{benefit.text}</span>
+                          <span className='flex-1 leading-tight font-bold font-nunito'>{benefit.text}</span>
                         </li>
                       );
                     })}

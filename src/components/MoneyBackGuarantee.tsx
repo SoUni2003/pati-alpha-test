@@ -7,7 +7,7 @@ interface MoneyBackGuaranteeProps {
 
 const MoneyBackGuarantee: React.FC<MoneyBackGuaranteeProps> = ({ bold = false, size = 'h-8 w-8' }) => {
   return (
-    <div className='flex items-center gap-4'>
+    <div className='flex items-center gap-3 lg:gap-4'>
       <img
         src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/60-days_11622780_1_1.png?v=1752388395'
         alt='60-day guarantee icon'

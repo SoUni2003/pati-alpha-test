@@ -5,45 +5,45 @@ const ACCORDION_ITEMS = [
   {
     title: 'Ingredients proven by science',
     content: (
-      <div className='space-y-4 pb-4 pt-2 text-sm text-sculptique-muted'>
+      <div className='space-y-4 text-sculptique-muted font-nunito leading-[1.3] text-[15px] lg:text-base'>
         <p>
-          <span className='font-bold text-sculptique-text'>Sculptique Ingredients:</span>
+          <span className='font-bold text-base text-sculptique-text'>Sculptique Ingredients:</span>
         </p>
-        <ul className='list-disc space-y-2 pl-5 marker:text-sculptique-text'>
+        <ul className='list-disc space-y-2 pl-5 font-montserrat marker:text-sculptique-text tracking-[0.02rem] leading-[1.7]'>
           <li>
-            <span className='font-semibold text-sculptique-text'>Echinacea purpurea Extract</span> – Known for its anti-inflammatory
-            properties, it may support skin health.
+            <span className='font-bold text-sculptique-text'>Echinacea purpurea Extract</span>
+            <span className='text-sculptique-text/75'> – Known for its anti-inflammatory properties, it may support skin health.</span>
           </li>
           <li>
-            <span className='font-semibold text-sculptique-text'>Dandelion Extract</span> – Traditionally used as a diuretic, it may help
-            reduce water retention.
+            <span className='font-bold text-sculptique-text'>Dandelion Extract</span>
+            <span className='text-sculptique-text/75'> – Traditionally used as a diuretic, it may help reduce water retention.</span>
           </li>
           <li>
-            <span className='font-semibold text-sculptique-text'>Burdock Powder</span> – Contains antioxidants that may promote skin
-            clarity.
+            <span className='font-bold text-sculptique-text'>Burdock Powder</span>
+            <span className='text-sculptique-text/75'> – Contains antioxidants that may promote skin clarity.</span>
           </li>
           <li>
-            <span className='font-semibold text-sculptique-text'>Cleavers Extract</span> – Believed to support lymphatic drainage and
-            detoxification.
+            <span className='font-bold text-sculptique-text'>Cleavers Extract</span>
+            <span className='text-sculptique-text/75'> – Believed to support lymphatic drainage and detoxification.</span>
           </li>
           <li>
-            <span className='font-semibold text-sculptique-text'>Rutin</span> – A flavonoid that may strengthen blood vessels and improve
-            circulation.
+            <span className='font-bold text-sculptique-text'>Rutin</span>
+            <span className='text-sculptique-text/75'> – A flavonoid that may strengthen blood vessels and improve circulation.</span>
           </li>
           <li>
-            <span className='font-semibold text-sculptique-text'>Bromelain Powder</span> – An enzyme from pineapple that may reduce
-            inflammation and support tissue repair.
+            <span className='font-bold text-sculptique-text'>Bromelain Powder</span>
+            <span className='text-sculptique-text/75'> – An enzyme from pineapple that may reduce inflammation and support tissue repair.</span>
           </li>
           <li>
-            <span className='font-semibold text-sculptique-text'>Lemon Powder</span> – Rich in vitamin C, it may aid in collagen production
-            and skin rejuvenation.
+            <span className='font-bold text-sculptique-text'>Lemon Powder</span>
+            <span className='text-sculptique-text/75'> – Rich in vitamin C, it may aid in collagen production and skin rejuvenation.</span>
           </li>
           <li>
-            <span className='font-semibold text-sculptique-text'>Kelp Extract</span> – A source of iodine and minerals that may support skin
-            metabolism.
+            <span className='font-bold text-sculptique-text'>Kelp Extract</span>
+            <span className='text-sculptique-text/75'> – A source of iodine and minerals that may support skin metabolism.</span>
           </li>
         </ul>
-        <p className='pt-2 text-center font-medium text-sculptique-text'>
+        <p className='pt-2 text-base text-left font-medium text-sculptique-text'>
           These natural ingredients work together to reduce puffiness, bloating, fluid retention.
         </p>
       </div>
@@ -52,30 +52,17 @@ const ACCORDION_ITEMS = [
   {
     title: 'How does it actually work?',
     content: (
-      <div className='space-y-4 pb-4 pt-2 text-sm text-sculptique-muted'>
-        <p>
-          Your lymphatic system is your body's internal cleaning crew—a network of vessels that processes 3-4 liters of cellular waste and
-          excess fluid every single day.
-        </p>
-        <p>
-          Sculptique is the only formula that addresses ALL 6 mechanisms of lymphatic dysfunction simultaneously—not with symbolic doses,
-          but with therapeutic amounts based on clinical research. Not just moving fluid temporarily. Not just reducing inflammation.
-          Complete restoration.
-        </p>
+      <div className='space-y-4 pt-2 text-base  font-nunito leading-[1.3]'>
+        Sculptique works by improving blood flow and supporting lymphatic drainage to reduce fluid buildup that causes puffiness, inflammation, and water retention. It also reduces inflammation and boosts collagen production to help skin become firmer and smoother.
       </div>
     ),
   },
   {
     title: 'Shipping and returns',
     content: (
-      <div className='space-y-4 pb-4 pt-2 text-sm text-sculptique-muted'>
-        <p>
-          We offer <span className='font-semibold text-sculptique-text'>Free Express Shipping from USA</span> on all orders.
-        </p>
-        <p>
-          Try it Risk-Free for 60 Days. If you are not satisfied with your results, we offer a{' '}
-          <span className='font-semibold text-sculptique-text'>60-day money-back guarantee</span>.
-        </p>
+      <div className='space-y-4 pt-2 text-base  font-nunito leading-[1.3]'>
+       <p>All of Sculptique orders get FREE shipping straight from our USA warehouse. Orders are usually shipped out within 1-2 working days, and you should receive the order within 3-7 working days for domestic USA orders, and within 10 working days for International orders.</p>
+       <p>We also offer a 60-day money back guarantee - if you are unsatisfied with our product, you can take advantage of our guarantee and ship back the product to us to get your return within 60 days of receiving your order.</p>
       </div>
     ),
   },
@@ -92,7 +79,7 @@ const ProductInfoAccordion = () => {
     <div className='mt-4 flex flex-col gap-6 font-sans'>
       <div className='flex flex-col gap-4'>
         <div className='flex items-center gap-2 text-[13px] text-sculptique-text'>
-          <svg width='33' height='18' viewBox='0 0 33 18' fill='none' xmlns='http://www.w3.org/2000/svg' className='flex-shrink-0'>
+          <svg width='18' height='18' viewBox='0 0 33 18' fill='none' xmlns='http://www.w3.org/2000/svg' className='flex-shrink-0 sm:w-[33px] sm:h-[18px]'>
             <mask id='mask0_30_2402' style={{ maskType: 'luminance' }} maskUnits='userSpaceOnUse' x='0' y='0' width='33' height='18'>
               <path d='M0 0H32.9901V18H0V0Z' fill='white'></path>
             </mask>
@@ -102,8 +89,8 @@ const ProductInfoAccordion = () => {
                 fill='#1A1A1A'></path>
             </g>
           </svg>
-          <p className='text-base font-nunito text-sculptique-text'>
-            Delivered on <span className='bg-sculptique-green font-semibold text-white px-2 py-1 rounded'>Wednesday, 21 January</span> with
+          <p className='text-xs lg:text-base font-nunito font-medium text-sculptique-text'>
+            Delivered on <span className='bg-sculptique-green font-semibold text-white px-2 py-1 rounded'>Friday, 23 January</span> with
             Express Shipping
           </p>
         </div>
@@ -117,26 +104,26 @@ const ProductInfoAccordion = () => {
         <div className='flex flex-col items-center gap-3'>
           <div className='flex items-center gap-3 text-xs text-sculptique-text lg:text-text-base'>
             <div className='flex items-center gap-1.5'>
-              <svg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'>
+              <svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 17 17' fill='none' className='sm:w-[17px] sm:h-[17px]'>
                 <path
                   fill-rule='evenodd'
                   clip-rule='evenodd'
                   d='M14.583 12.1713C14.8698 12.1333 15.2001 12.1658 15.2331 12.5409L15.4195 14.6275C15.4683 15.1837 14.6219 15.2591 14.5729 14.7009L14.4664 13.5087C11.0241 17.4806 4.69181 17.0524 1.8463 12.5832C0.813943 10.9619 0.373055 8.97183 0.729143 6.97041C0.826743 6.41646 1.66639 6.56543 1.56914 7.11708C0.93661 10.7064 3.13963 14.1944 6.67777 15.1423C9.24097 15.8291 11.929 15.0161 13.687 13.1046L12.7599 13.1875C12.2036 13.2364 12.1283 12.39 12.6865 12.3409L14.583 12.1713ZM4.40861 3.48455L3.31261 3.58232C5.07048 1.67103 7.75883 0.858057 10.3219 1.54481C13.86 2.4929 16.063 5.98072 15.4305 9.57006C15.3332 10.1217 16.1729 10.2707 16.2705 9.71672C16.6267 7.71512 16.1857 5.72526 15.1533 4.10392C12.3587 -0.285054 6.18194 -0.791543 2.68932 3.00366L2.59723 1.97219C2.54817 1.41397 1.70177 1.48917 1.75065 2.04561L1.93554 4.11495C1.95314 4.36881 2.16274 4.54428 2.41768 4.51548L4.48203 4.33112C5.03972 4.28206 4.96559 3.43619 4.40861 3.48455Z'
                   fill='black'></path>
               </svg>
-              <span className='text-base font-nunito'>Refills Ship Bi-Monthly</span>
+              <span className='text-xs lg:text-base font-nunito leading-[1.3]'>Refills Ship Bi-Monthly</span>
             </div>
-            <span className='h-4 w-px bg-[#000000]'></span>
+            <span className='h-8 w-px bg-[#000000]'></span>
             <div className='flex items-center gap-1.5'>
-              <img src='https://cdn.shopify.com/s/files/1/0779/0673/9384/files/clock.webp' alt='' className='h-5 w-5' />
-              <span className='text-base font-nunito'>Stop or Cancel Anytime</span>
+              <img src='https://cdn.shopify.com/s/files/1/0779/0673/9384/files/clock.webp' alt='' className='h-[14px] sm:h-5 w-[14px] sm:w-5' />
+              <span className='text-xs lg:text-base font-nunito leading-[1.3]'>Stop or Cancel Anytime</span>
             </div>
           </div>
 
           <img
             src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_1000003454.png?v=1752066654'
             alt='Payment methods'
-            className='h-[30px] w-auto'
+            className='h-[18.5px] lg:h-[30px] w-auto'
           />
         </div>
 
@@ -153,43 +140,45 @@ const ProductInfoAccordion = () => {
       </div>
 
       <div className='flex flex-col gap-2'>
-        <MoneyBackGuarantee />
+        <MoneyBackGuarantee size='h-[16px] sm:h-[26px] w-[16px] sm:w-[26px]' />
         <div className='flex items-center gap-3'>
           <img
             src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_1000003293.png?v=1752066864'
             alt=''
-            className='h-6 w-6 object-contain'
+            className='h-[16px] sm:h-6 w-[16px] sm:w-6 object-contain'
           />
           <p className='text-base font-nunito font-medium text-sculptique-text'>Free Shipping From USA Included</p>
         </div>
       </div>
 
       <div className='relative overflow-hidden rounded-2xl bg-sculptique-yellow p-3'>
-        <div className='flex items-center gap-4'>
-          <img
-            src='https://trysculptique.com/cdn/shop/files/AI_Nurse_Holding_TORC_2_efcbd677-7242-4cb2-9f99-ad1e3726b19b.png?v=1752500889'
-            alt='Margaret Ellison'
-            className='h-[66px] w-[66px] rounded-full object-cover'
-          />
-          <div>
-            <div className='flex flex-wrap items-center gap-1.5 font-nunito text-base'>
-              <span className='font-semibold text-sculptique-text'>Margaret Ellison | FL</span>
-              <div className='flex items-center gap-1 text-green-700'>
-                <img
-                  src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_7966.png?v=1752068267'
-                  alt='Verified'
-                  className='h-5 w-auto'
-                />
-              </div>
-            </div>
+        <div className='flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4'>
+          <div className='flex items-center gap-2'>
             <img
-              src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/stars-4.5_1.png?v=1752068267'
-              alt='5 stars'
-              className='h-auto w-[100px] object-contain'
+              src='https://trysculptique.com/cdn/shop/files/AI_Nurse_Holding_TORC_2_efcbd677-7242-4cb2-9f99-ad1e3726b19b.png?v=1752500889'
+              alt='Margaret Ellison'
+              className='h-10 w-10 sm:h-[66px] sm:w-[66px] rounded-full object-cover flex-shrink-0'
             />
+            <div className='flex flex-col sm:flex-row sm:items-center sm:gap-3'>
+              <div className='flex items-center gap-2'>
+                <span className='text-sculptique-text text-base sm:text-lg truncate'>Margaret Ellison | <br className='block sm:hidden' /> FL</span>
+                <div className='flex items-center gap-1 text-green-700 flex-shrink-0'>
+                  <img
+                    src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_7966.png?v=1752068267'
+                    alt='Verified'
+                    className='h-[18px] sm:h-5 w-auto flex-shrink-0'
+                  />
+                </div>
+              </div>
+              <img
+                src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/stars-4.5_1.png?v=1752068267'
+                alt='5 stars'
+                className='h-auto w-[100px] object-contain mt-2 sm:mt-0 sm:ml-4 sm:static relative left-0 self-start sm:self-center'
+              />
+            </div>
           </div>
         </div>
-        <h3 className='mt-4 font-nunito text-lg font-medium leading-tight text-sculptique-text'>
+        <h3 className='mt-4 font-nunito text-base lg:text-lg font-semibold leading-[1.3] text-sculptique-text'>
           Even my husband noticed... the spark came back.
         </h3>
         <p className='mt-2 font-nunito font-medium text-base leading-[1.3] '>
@@ -211,7 +200,7 @@ const ProductInfoAccordion = () => {
               }`}>
               <button
                 onClick={() => toggleAccordion(idx)}
-                className='flex w-full items-center justify-between px-6 py-4 text-left font-medium text-sculptique-text transition-colors'>
+                className='flex w-full items-center justify-between px-5 lg:px-6 py-3 text-left font-medium text-sculptique-text transition-colors'>
                 <span className='text-base font-nunito'>{item.title}</span>
                 <span
                   className={`ml-2 flex h-6 w-6 items-center justify-center rounded-full transition-transform bg-sculptique-yellow text-sculptique-green ${
