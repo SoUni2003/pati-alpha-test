@@ -135,7 +135,7 @@ const HeroSection = () => {
                 type="button"
                 aria-label="Previous slide"
                 onClick={prevSlide}
-                className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 z-10"
+                className="absolute left-6 top-1/2 -translate-y-1/2 h-8 w-8 z-10"
               >
                 <img
                   src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin_1.png?v=1752126281"
@@ -147,7 +147,7 @@ const HeroSection = () => {
                 type="button"
                 aria-label="Next slide"
                 onClick={nextSlide}
-                className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 z-10"
+                className="absolute right-6 top-1/2 -translate-y-1/2 h-8 w-8 z-10"
               >
                 <img
                   src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin.png?v=1752126281"
