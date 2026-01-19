@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pati-alpha-test.vercel.app/sitemap.xml
