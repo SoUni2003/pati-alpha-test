@@ -13,13 +13,13 @@ This repository contains the practical assessment submission for the **Alpha - e
 This project is built using modern front-end technologies to ensure performance, maintainability, and responsiveness:
 
 -   **React** (v19): Component-based UI architecture.
--   **Tailwind CSS**: Utility-first CSS framework for precise styling and responsive design.
--   **Vite**: Next-generation frontend tooling for fast development and building.
 -   **TypeScript**: For type safety and better developer experience.
+-   **Tailwind CSS**: Utility-first CSS framework for precise styling and responsive design.
+-   **Vite**: High-performance frontend tooling for instant server start and lightning-fast HMR.
+-   **HTML5 & CSS3**: Modern semantic structure and styling standards.
 
 ## Key Features
 
--   **Pixel-Perfect Implementation**: Meticulously matched layout, typography, and spacing to the reference design.
 -   **Responsive Design**: Fully optimized layout devices.
 -   **Interactive Components**: Functional sliders/carousels and hover states.
 -   **Clean Architecture**: Modular component structure and organized file system.
