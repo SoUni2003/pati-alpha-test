@@ -1,19 +1,9 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import BundlesSection from "./components/BundlesSection";
 import ProductInfoAccordion from "./components/ProductInfoAccordion";
 
 const HERO_IMAGE =
   "https://trysculptique.com/cdn/shop/files/LymoPDPImagesArtboard1_8e287aa1-576e-42b1-9a87-ce2fcdaded3a.jpg?v=1760103674";
-const RATING_BADGE =
-  "https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_229.png?v=1752064359";
-const NYSALE_BADGE =
-  "https://cdn.shopify.com/s/files/1/0917/5649/5191/files/nysale.png?v=1766822224";
-const NUTRITION_ICON =
-  "https://cdn.shopify.com/s/files/1/0917/5649/5191/files/leaves_1247958_1_cf2e7df4-c113-4c3a-be49-f876ec94d873.png?v=1766822629";
-const ARROW_PREV =
-  "https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin_1.png?v=1752126281";
-const ARROW_NEXT =
-  "https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin.png?v=1752126281";
 
 const GRID_IMAGES_2COL = [
   "https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard2.jpg?v=1760103684",
@@ -62,6 +52,7 @@ const ALL_IMAGES = [HERO_IMAGE, ...GRID_IMAGES_2COL, ...GRID_IMAGES_3COL];
 
 const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = () => {
     setActiveSlide((prev) => (prev + 1) % ALL_IMAGES.length);
@@ -72,6 +63,21 @@ const HeroSection = () => {
       (prev) => (prev - 1 + ALL_IMAGES.length) % ALL_IMAGES.length,
     );
   };
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      const activeThumb = scrollRef.current.children[
+        activeSlide
+      ] as HTMLElement;
+      if (activeThumb) {
+        activeThumb.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "nearest",
+        });
+      }
+    }
+  }, [activeSlide]);
 
   return (
     <section className="bg-white py-8">
@@ -97,7 +103,7 @@ const HeroSection = () => {
                 <>
                   <div className="absolute right-3 top-3">
                     <img
-                      src={NYSALE_BADGE}
+                      src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/nysale.png?v=1766822224"
                       alt="New Years Sale"
                       className="h-20 w-20 object-contain"
                       loading="lazy"
@@ -111,7 +117,7 @@ const HeroSection = () => {
                     >
                       <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center mr-2">
                         <img
-                          src={NUTRITION_ICON}
+                          src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/leaves_1247958_1_cf2e7df4-c113-4c3a-be49-f876ec94d873.png?v=1766822629"
                           alt=""
                           className="h-4 w-4"
                           loading="lazy"
@@ -131,7 +137,11 @@ const HeroSection = () => {
                 onClick={prevSlide}
                 className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 z-10"
               >
-                <img src={ARROW_PREV} className="w-8 h-8 text-black" alt="" />
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin_1.png?v=1752126281"
+                  className="w-8 h-8 text-black"
+                  alt=""
+                />
               </button>
               <button
                 type="button"
@@ -139,11 +149,18 @@ const HeroSection = () => {
                 onClick={nextSlide}
                 className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 z-10"
               >
-                <img src={ARROW_NEXT} className="w-8 h-8 text-black" alt="" />
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin.png?v=1752126281"
+                  className="w-8 h-8 text-black"
+                  alt=""
+                />
               </button>
             </div>
 
-            <div className="mt-4 flex gap-2 overflow-x-auto px-1 no-scrollbar pb-2">
+            <div
+              ref={scrollRef}
+              className="mt-4 flex gap-2 overflow-x-auto px-1 no-scrollbar pb-2"
+            >
               {ALL_IMAGES.map((img, idx) => (
                 <button
                   type="button"
@@ -175,7 +192,7 @@ const HeroSection = () => {
 
                 <div className="absolute right-3 top-3 sm:right-4 sm:top-4">
                   <img
-                    src={NYSALE_BADGE}
+                    src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/nysale.png?v=1766822224"
                     alt="New Years Sale"
                     className="h-20 w-20 sm:h-[120px] sm:w-[120px] object-contain"
                     loading="lazy"
@@ -189,7 +206,7 @@ const HeroSection = () => {
                   >
                     <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center sm:h-7 sm:w-7">
                       <img
-                        src={NUTRITION_ICON}
+                        src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/leaves_1247958_1_cf2e7df4-c113-4c3a-be49-f876ec94d873.png?v=1766822629"
                         alt=""
                         className="h-4 w-4 sm:h-6 sm:w-6"
                         loading="lazy"
@@ -256,7 +273,7 @@ const HeroSection = () => {
         <div className="w-full sm:w-[50%] max-w-[588px]">
           <div className="flex items-center space-x-4">
             <img
-              src={RATING_BADGE}
+              src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_229.png?v=1752064359"
               alt="Rating badge"
               className="h-[18px] w-auto "
               loading="lazy"
