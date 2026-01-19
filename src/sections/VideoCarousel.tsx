@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { MainButton, MoneyBackGuarantee } from "../components";
 
 const VideoCarousel = () => {
@@ -70,7 +70,7 @@ const VideoCarousel = () => {
     },
   ];
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } =
         scrollContainerRef.current;
@@ -80,7 +80,7 @@ const VideoCarousel = () => {
       const maxLeft = 100 - thumbWidth;
       setScrollProgress(scrollRatio * maxLeft);
     }
-  };
+  }, [VIDEOS.length]);
 
   const togglePlay = (index: number) => {
     const video = videoRefs.current[index];
