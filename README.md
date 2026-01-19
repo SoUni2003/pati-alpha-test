@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# PATI Alpha Track - eCommerce Developer Practical Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This repository contains the practical assessment submission for the **Alpha - eCommerce Developer Track** at PATI Group. The goal of this project is to build a pixel-perfect, responsive clone of the [Sculptique Landing Page](https://trysculptique.com/products/lymph-cc-select), demonstrating high-fidelity UI execution and engineering best practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Developer:** Tran Quoc Nghi
 
-## React Compiler
+**Live Demo:** [View Deployed Project](https://pati-alpha-test.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+This project is built using modern front-end technologies to ensure performance, maintainability, and responsiveness:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   **React** (v19): Component-based UI architecture.
+-   **Tailwind CSS** (v3): Utility-first CSS framework for precise styling and responsive design.
+-   **Vite**: Next-generation frontend tooling for fast development and building.
+-   **TypeScript**: For type safety and better developer experience.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Key Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+-   **Pixel-Perfect Implementation**: Meticulously matched layout, typography, and spacing to the reference design.
+-   **Responsive Design**: Fully optimized layout devices.
+-   **Interactive Components**: Functional sliders/carousels and hover states.
+-   **Clean Architecture**: Modular component structure and organized file system.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+
+Follow these instructions to set up and run the project locally.
+
+### Prerequisites
+
+Ensure you have **Node.js** installed on your machine.
+
+### Installation
+
+This project uses **Yarn** as the package manager.
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd pati-alpha-test
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    yarn install
+    ```
+
+### Running the Application
+
+To start the development server:
+
+```bash
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The application will be available at `http://localhost:5173` (or the port shown in your terminal).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Building for Production
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+To create a production-ready build:
+
+```bash
+yarn build
 ```
+
+To preview the production build locally:
+
+```bash
+yarn preview
+```
+
+---
+
+*Thank you for reviewing my submission. I look forward to your feedback!*
