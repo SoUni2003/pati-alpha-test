@@ -46,7 +46,6 @@ The project utilizes a modular component architecture to ensure reusability and 
 
 -   **`MainButton`**: A highly flexible button component that supports polymorphism (renders as `<button>` or `<a>`), handle varying styles, and ensures consistent CTAs across the site.
 -   **`MoneyBackGuarantee`**: A stateless component encapsulating the "60-Day Guarantee" badge logic, allowing for consistent trust signaling in the Hero, CTA, and Bundle sections.
--   **`Header`**: A responsive navigation component.
 
 ### Code Structure Preview
 
