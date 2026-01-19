@@ -50,7 +50,7 @@ const HeroProductDetails = () => {
       <ul className='mt-4 space-y-4'>
         {SELLING_POINTS.map((point) => (
           <li key={point.text} className='flex items-center gap-3'>
-            <img src={point.icon} alt='' className='h-[22px] w-[22px] flex-shrink-0 sm:h-[49px] sm:w-[49px]' loading='lazy' />
+            <img src={point.icon} alt='' className='h-[30px] w-[30px] flex-shrink-0 sm:h-[49px] sm:w-[49px]' loading='lazy' />
             <p className='leading-[1.3] text-base sm:leading-6'>{point.text}</p>
           </li>
         ))}

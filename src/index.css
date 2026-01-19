@@ -9,6 +9,12 @@
   color: #000000;
 }
 
+@layer base {
+  body {
+    @apply leading-[1.3];
+  }
+}
+
 @layer components {
   .page-container {
     @apply mx-auto w-full max-w-page px-[15px] sm:px-[50px];

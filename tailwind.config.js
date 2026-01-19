@@ -13,6 +13,9 @@ export default {
       }
     },
     extend: {
+      lineHeight: {
+        '1.3': '1.3',
+      },
       colors: {
         'sculptique-green': '#039869',
         'sculptique-cream': '#f8f6f1',

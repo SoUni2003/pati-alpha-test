@@ -90,7 +90,7 @@ const ProductInfoAccordion = () => {
             </g>
           </svg>
           <p className='text-xs lg:text-base font-nunito font-medium text-sculptique-text'>
-            Delivered on <span className='bg-sculptique-green font-semibold text-white px-2 py-1 rounded'>Friday, 23 January</span> with
+            Delivered on <span className='bg-sculptique-green font-semibold text-white px-1 sm:px-2 py-0.5 sm:py-1 rounded'>Friday, 23 January</span> with
             Express Shipping
           </p>
         </div>
