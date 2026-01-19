@@ -22,7 +22,7 @@ const REASONS = [
 const WhyNothingWorkedSection = () => {
   return (
     <section className="bg-sculptique-yellow py-1 overflow-hidden">
-      <div className="mx-auto w-full max-w-page px-4 sm:px-6 relative">
+      <div className="page-container relative">
         <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center mb-4 lg:mb-10">
           Why Nothing Has <span className="text-sculptique-green">Worked</span>
         </h2>

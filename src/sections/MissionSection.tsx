@@ -1,7 +1,7 @@
 const MissionSection = () => {
   return (
     <section className="bg-white py-8 lg:py-[56px]">
-      <div className="mx-auto max-w-page px-4 lg:px-0">
+      <div className="page-container">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-y-4 lg:gap-x-16 lg:items-start">
           <div className="flex flex-col lg:col-span-7">
             <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-left mb-4">

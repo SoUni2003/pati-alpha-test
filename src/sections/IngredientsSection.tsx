@@ -65,7 +65,7 @@ const IngredientsSection = () => {
   return (
     <section className="py-8">
      <div className="bg-[#f3eee0] py-16 overflow-hidden">
-       <div className="mx-auto w-full max-w-page px-4 md:px-6">
+       <div className="page-container">
         
         <div className="text-center max-w-[800px] mx-auto mb-14">
             <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center mb-4">

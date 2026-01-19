@@ -31,7 +31,7 @@ const SYMPTOMS = [
 const SymptomsSection = () => {
   return (
     <section className="py-10 sm:py-16 lg:py-24">
-      <div className="mx-auto w-full max-w-[1240px] px-4 sm:px-6">
+      <div className="page-container">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.1]">
             Why Your{" "}

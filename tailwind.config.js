@@ -34,7 +34,7 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
       },
       maxWidth: {
-        page: '1250px',
+        page: '1340px',
       }
     },
   },

@@ -117,7 +117,7 @@ const VideoCarousel = () => {
 
   return (
     <section className="bg-sculptique-yellow py-12 lg:py-[56px]">
-      <div className="mx-auto w-full max-w-page px-4 lg:px-0">
+      <div className="page-container">
         
         <div className="mb-4 flex flex-col items-center justify-center text-center">
             <img 

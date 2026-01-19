@@ -10,6 +10,10 @@ const NYSALE_BADGE =
   "https://cdn.shopify.com/s/files/1/0917/5649/5191/files/nysale.png?v=1766822224";
 const NUTRITION_ICON =
   "https://cdn.shopify.com/s/files/1/0917/5649/5191/files/leaves_1247958_1_cf2e7df4-c113-4c3a-be49-f876ec94d873.png?v=1766822629";
+const ARROW_PREV =
+  "https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin_1.png?v=1752126281";
+const ARROW_NEXT =
+  "https://cdn.shopify.com/s/files/1/0917/5649/5191/files/iconamoon_arrow-up-2-thin.png?v=1752126281";
 
 const GRID_IMAGES_2COL = [
   "https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard2.jpg?v=1760103684",
@@ -54,11 +58,7 @@ const OTHER_IMAGES = [
   "https://trysculptique.com/cdn/shop/files/puffiness-min.png?v=1758713216",
 ];
 
-const ALL_IMAGES = [
-  HERO_IMAGE,
-  ...GRID_IMAGES_2COL,
-  ...GRID_IMAGES_3COL,
-];
+const ALL_IMAGES = [HERO_IMAGE, ...GRID_IMAGES_2COL, ...GRID_IMAGES_3COL];
 
 const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -68,105 +68,130 @@ const HeroSection = () => {
   };
 
   const prevSlide = () => {
-    setActiveSlide((prev) => (prev - 1 + ALL_IMAGES.length) % ALL_IMAGES.length);
+    setActiveSlide(
+      (prev) => (prev - 1 + ALL_IMAGES.length) % ALL_IMAGES.length,
+    );
   };
 
   return (
-    <section className="bg-white py-8 px-1">
-      <div className="mx-auto flex w-full max-w-[1250px] flex-col gap-x-16 lg:flex-row lg:items-start">
-        <div className="flex w-full flex-col items-center lg:w-[50%] max-w-[588px] ">
-          
-          {/* Mobile Carousel */}
-          <div className="flex lg:hidden w-full flex-col mb-4">
+    <section className="bg-white py-8">
+      <div className="page-container flex flex-col gap-x-16 sm:flex-row lg:items-start">
+        <div className="flex w-full flex-col items-center sm:w-[50%] max-w-[588px] ">
+          <div className="flex sm:hidden w-full flex-col mb-4">
             <div className="relative w-full aspect-square bg-[#f7f7f7] rounded-lg overflow-hidden">
-                <img 
-                  src={ALL_IMAGES[activeSlide]} 
-                  alt="Product slide" 
-                  className="w-full h-full object-cover" 
-                />
-                
-                {activeSlide === 0 && (
-                   <>
-                     <div className="absolute right-3 top-3">
+              <div
+                className="flex h-full w-full transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+              >
+                {ALL_IMAGES.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`Product slide ${index + 1}`}
+                    className="w-full h-full object-cover shrink-0"
+                  />
+                ))}
+              </div>
+
+              {activeSlide === 0 && (
+                <>
+                  <div className="absolute right-3 top-3">
+                    <img
+                      src={NYSALE_BADGE}
+                      alt="New Years Sale"
+                      className="h-20 w-20 object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                    <button
+                      type="button"
+                      className="inline-flex border border-black items-center rounded-full bg-white/98 px-4 py-1 backdrop-blur-lg transition bg-[#ffffffd9]/80 hover:opacity-85"
+                    >
+                      <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center mr-2">
                         <img
-                          src={NYSALE_BADGE}
-                          alt="New Years Sale"
-                          className="h-20 w-20 object-contain"
+                          src={NUTRITION_ICON}
+                          alt=""
+                          className="h-4 w-4"
                           loading="lazy"
                         />
-                      </div>
+                      </span>
+                      <span className="whitespace-nowrap font-serif text-sm text-sculptique-secondary">
+                        Nutritional Information
+                      </span>
+                    </button>
+                  </div>
+                </>
+              )}
 
-                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
-                        <button className="inline-flex border border-black items-center rounded-full bg-white/98 px-4 py-1 backdrop-blur-lg transition bg-[#ffffffd9]/80 hover:opacity-85">
-                          <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center mr-2">
-                            <img
-                              src={NUTRITION_ICON}
-                              alt=""
-                              className="h-4 w-4"
-                              loading="lazy"
-                            />
-                          </span>
-                          <span className="whitespace-nowrap font-serif text-sm text-sculptique-secondary">
-                            Nutritional Information
-                          </span>
-                        </button>
-                      </div>
-                   </>
-                )}
-
-                 <button 
-                    onClick={prevSlide} 
-                    className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center border border-gray-200 shadow-sm z-10"
-                 > 
-                    <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-                 </button>
-                 <button 
-                    onClick={nextSlide} 
-                    className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center border border-gray-200 shadow-sm z-10"
-                 > 
-                    <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                 </button>
+              <button
+                type="button"
+                aria-label="Previous slide"
+                onClick={prevSlide}
+                className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 z-10"
+              >
+                <img src={ARROW_PREV} className="w-8 h-8 text-black" alt="" />
+              </button>
+              <button
+                type="button"
+                aria-label="Next slide"
+                onClick={nextSlide}
+                className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 z-10"
+              >
+                <img src={ARROW_NEXT} className="w-8 h-8 text-black" alt="" />
+              </button>
             </div>
 
-            <div className="mt-4 flex gap-2 overflow-hidden px-1 no-scrollbar pb-2">
-                {ALL_IMAGES.map((img, idx) => (
-                    <button 
-                       key={idx} 
-                       onClick={() => setActiveSlide(idx)}
-                       className={`relative w-16 h-16 shrink-0 rounded-lg overflow-hidden border-2 transition-all ${activeSlide === idx ? 'border-[#0c7c00] opacity-100' : 'border-transparent opacity-70'}`}
-                    >
-                        <img src={img} className="w-full h-full object-cover" loading="lazy" />
-                    </button>
-                ))}
+            <div className="mt-4 flex gap-2 overflow-x-auto px-1 no-scrollbar pb-2">
+              {ALL_IMAGES.map((img, idx) => (
+                <button
+                  type="button"
+                  aria-label={`View slide ${idx + 1}`}
+                  key={idx}
+                  onClick={() => setActiveSlide(idx)}
+                  className={`relative w-[calc(25%-6px)] aspect-square shrink-0 rounded-lg overflow-hidden border-2 transition-all ${activeSlide === idx ? "border-[#0c7c00] opacity-100" : "border-transparent opacity-70"}`}
+                >
+                  <img
+                    src={img}
+                    className="w-full h-full object-cover"
+                    alt={`Slide ${idx + 1}`}
+                    loading="lazy"
+                  />
+                </button>
+              ))}
             </div>
           </div>
 
-          <div className="hidden lg:flex w-full flex-col items-center">
+          <div className="hidden sm:flex w-full flex-col items-center">
             <div className="relative w-full">
-              <div className="relative w-full pb-[100%]">
+              <div className="relative w-full sm:pb-[100%]">
                 <img
                   src={HERO_IMAGE}
                   alt="Sculptique lymphatic drainage bottle"
-                  className="absolute inset-0 h-auto lg:h-[588px] w-full object-cover rounded-lg"
+                  className="absolute inset-0 h-full w-full object-cover rounded-lg"
                   loading="lazy"
                 />
 
-                <div className="absolute right-3 top-3 lg:right-4 lg:top-4">
+                <div className="absolute right-3 top-3 sm:right-4 sm:top-4">
                   <img
                     src={NYSALE_BADGE}
                     alt="New Years Sale"
-                    className="h-20 w-20 lg:h-[120px] lg:w-[120px] object-contain"
+                    className="h-20 w-20 sm:h-[120px] sm:w-[120px] object-contain"
                     loading="lazy"
                   />
                 </div>
 
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 lg:bottom-7">
-                  <button className="inline-flex border border-black items-center rounded-full bg-white/98 px-4 py-1 backdrop-blur-lg transition bg-[#ffffffd9]/80 hover:opacity-85 lg:gap-2 lg:text-lg lg:px-6 lg:py-2">
-                    <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center lg:h-7 lg:w-7">
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 sm:bottom-7">
+                  <button
+                    type="button"
+                    className="inline-flex border border-black items-center rounded-full bg-white/98 px-4 py-1 backdrop-blur-lg transition bg-[#ffffffd9]/80 hover:opacity-85 sm:gap-2 sm:text-lg sm:px-6 sm:py-2"
+                  >
+                    <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center sm:h-7 sm:w-7">
                       <img
                         src={NUTRITION_ICON}
                         alt=""
-                        className="h-4 w-4 lg:h-6 lg:w-6"
+                        className="h-4 w-4 sm:h-6 sm:w-6"
                         loading="lazy"
                       />
                     </span>
@@ -178,7 +203,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="lg:mt-5 grid w-full grid-cols-2 gap-4">
+            <div className="sm:mt-5 grid w-full grid-cols-2 gap-4">
               {GRID_IMAGES_2COL.map((img, idx) => (
                 <div
                   key={idx}
@@ -187,7 +212,7 @@ const HeroSection = () => {
                   <img
                     src={img}
                     alt=""
-                    className="h-[286px] w-[286px] object-cover"
+                    className="w-full aspect-square object-cover"
                     loading="lazy"
                   />
                 </div>
@@ -203,7 +228,7 @@ const HeroSection = () => {
                   <img
                     src={img}
                     alt=""
-                    className="w-full lg:w-[185px] lg:h-[185px] object-cover "
+                    className="w-full aspect-square object-cover"
                     loading="lazy"
                   />
                 </div>
@@ -228,7 +253,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-full lg:w-[50%] max-w-[588px]">
+        <div className="w-full sm:w-[50%] max-w-[588px]">
           <div className="flex items-center space-x-4">
             <img
               src={RATING_BADGE}
@@ -236,12 +261,12 @@ const HeroSection = () => {
               className="h-[18px] w-auto "
               loading="lazy"
             />
-            <p className="text-xs font-nunito text-sculptique-text font-medium lg:text-base">
+            <p className="text-xs font-nunito text-sculptique-text font-medium sm:text-base">
               4.8/5 Excellent | Based on 2381 Reviews
             </p>
           </div>
 
-          <h1 className="mt-5 font-lora text-2xl leading-tight text-sculptique-text lg:text-3xl">
+          <h1 className="mt-5 font-lora text-2xl leading-tight text-sculptique-text sm:text-3xl">
             New Maximum Potency Formula – Lymphatic Drainage Capsules by
             Sculptique™
           </h1>
@@ -252,18 +277,18 @@ const HeroSection = () => {
                 <img
                   src={point.icon}
                   alt=""
-                  className="mt-0.5 h-10 w-10 flex-shrink-0 lg:h-[49px] lg:w-[49px]"
+                  className="mt-0.5 h-10 w-10 flex-shrink-0 sm:h-[49px] sm:w-[49px]"
                   loading="lazy"
                 />
-                <p className="text-sm leading-5 sm:text-base sm:leading-6 lg:text-base lg:leading-7">
+                <p className="text-sm leading-5 sm:text-base sm:leading-6">
                   {point.text}
                 </p>
               </li>
             ))}
           </ul>
           <div id="maximized" className="relative mt-4 w-full bg-white">
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-start lg:gap-4">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-start sm:gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
                 <div className="flex items-center gap-2 text-sculptique-text">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -279,7 +304,9 @@ const HeroSection = () => {
                     ></path>
                   </svg>
                   <p className="font-lora text-base text-center font-medium leading-tight text-sculptique-text">
-                    Clinicians'<br />Choice
+                    Clinicians'
+                    <br />
+                    Choice
                   </p>
                   <span className="hidden lg:inline-flex" aria-hidden="true">
                     <svg
@@ -297,19 +324,19 @@ const HeroSection = () => {
                     </svg>
                   </span>
                 </div>
-                <div className="text-[13px] leading-6 text-sculptique-text lg:max-w-md lg:text-[13px]">
+                <div className="text-[13px] leading-6 text-sculptique-text sm:max-w-md sm:text-[13px]">
                   <span className="font-semibold">373 clinicians</span> share
                   this on
                   <span className="italic"> FrontrowMD </span> <br />
                   without compensation.
                   <button
                     type="button"
-                    className="ml-2 inline-flex items-center text-sm underline text-sculptique-text hover:underline underline-offset-2 hover:opacity-80 lg:text-[13px]"
+                    className="ml-2 inline-flex items-center text-sm underline text-sculptique-text hover:underline underline-offset-2 hover:opacity-80 sm:text-[13px]"
                     aria-label="Click to learn more about the clinicians sharing this product"
                   >
                     Learn more
                   </button>
-                  <div className="flex flex-col items-start gap-3 lg:flex-row lg:items-center lg:gap-4">
+                  <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-4">
                     <div className="flex items-center -space-x-0.5">
                       <img
                         src="https://assets.app.thefrontrowhealth.com/jijjnma3wz2ktevmvpuoewdnubm0"
@@ -329,7 +356,7 @@ const HeroSection = () => {
                     </div>
                     <button
                       type="button"
-                      className="inline-flex items-center text-[13px] font-semibold text-sculptique-text hover:underline underline-offset-2 hover:opacity-80 lg:text-[13px]"
+                      className="inline-flex items-center text-[13px] font-semibold text-sculptique-text hover:underline underline-offset-2 hover:opacity-80 sm:text-[13px]"
                       aria-label="Click to read reviews from clinicians sharing this product"
                     >
                       Read their reviews
@@ -339,7 +366,7 @@ const HeroSection = () => {
               </div>
               <button
                 type="button"
-                className="absolute right-3 top-3 lg:static flex h-5 w-5 items-center justify-center rounded-full bg-neutral-200/80 text-sculptique-text transition hover:bg-neutral-300"
+                className="absolute right-3 top-3 sm:static flex h-5 w-5 items-center justify-center rounded-full bg-neutral-200/80 text-sculptique-text transition hover:bg-neutral-300"
                 id="close-button"
                 aria-label="Click to minimize banner"
               >

@@ -4,7 +4,7 @@ import MoneyBackGuarantee from "../components/MoneyBackGuarantee";
 const ExpertSection = () => {
   return (
     <section className="bg-white py-8 lg:py-16">
-      <div className="mx-auto w-full max-w-page px-4 lg:px-0">
+      <div className="page-container">
         <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-lg bg-[#F8F8F8]">
           <div className="flex w-full flex-col justify-center p-4  lg:p-8 order-2 md:order-1">
             <span className="mb-4 text-base font-nunito font-medium text-sculptique-muted leading-[1.3]">

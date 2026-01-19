@@ -4,7 +4,7 @@ import MoneyBackGuarantee from "../components/MoneyBackGuarantee";
 const FinalCTASection = () => {
   return (
     <section className="bg-sculptique-yellow py-8 lg:py-[56px]">
-      <div className="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-0">
+      <div className="page-container">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
           
           <div className="flex-1 w-full lg:w-1/2 flex flex-col items-start text-left">

@@ -28,7 +28,7 @@ const FeaturesSection = () => {
 
   return (
     <section className="bg-sculptique-yellow py-8">
-      <div className="container mx-auto px-4 max-w-page">
+      <div className="page-container">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 gap-y-4 lg:gap-y-12">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center">

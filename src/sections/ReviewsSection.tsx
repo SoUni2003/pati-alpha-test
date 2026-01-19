@@ -203,7 +203,7 @@ const ReviewsSection = () => {
 
   return (
     <section className="lg:py-6">
-      <div className="mx-auto max-w-page w-full px-4 lg:px-6">
+      <div className="page-container">
         <div className="text-center mb-10  max-w-[800px] mx-auto">
           <div className="flex items-center justify-center mb-4">
             <img

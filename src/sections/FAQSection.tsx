@@ -59,8 +59,8 @@ const FAQSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>();
 
   return (
-    <section className="bg-white px-4 lg:px-0 py-8 lg:py-[56px]">
-      <div className=" w-full">
+    <section className="bg-white py-8 lg:py-[56px]">
+      <div className="page-container">
         <div className="rounded-2xl py-4">
           <h2 className="font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center mb-4">
             Frequently Asked Questions
