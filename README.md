@@ -13,7 +13,7 @@ This repository contains the practical assessment submission for the **Alpha - e
 This project is built using modern front-end technologies to ensure performance, maintainability, and responsiveness:
 
 -   **React** (v19): Component-based UI architecture.
--   **Tailwind CSS** (v3): Utility-first CSS framework for precise styling and responsive design.
+-   **Tailwind CSS**: Utility-first CSS framework for precise styling and responsive design.
 -   **Vite**: Next-generation frontend tooling for fast development and building.
 -   **TypeScript**: For type safety and better developer experience.
 
@@ -37,6 +37,23 @@ High performance and SEO optimization were key priorities during development.
     -   Valid `robots.txt` and `sitemap.xml` generated.
     -   Custom Favicon implementation.
 -   **Asset Optimization**: Localized critical assets for faster loading times.
+
+## Component Architecture
+
+The project utilizes a modular component architecture to ensure reusability and maintainability.
+
+### Core Reusable Components
+
+-   **`MainButton`**: A highly flexible button component that supports polymorphism (renders as `<button>` or `<a>`), handle varying styles, and ensures consistent CTAs across the site.
+-   **`MoneyBackGuarantee`**: A stateless component encapsulating the "60-Day Guarantee" badge logic, allowing for consistent trust signaling in the Hero, CTA, and Bundle sections.
+-   **`Header`**: A responsive navigation component.
+
+### Code Structure Preview
+
+Screenshots demonstrating the clean code practices and component usage:
+
+![Reusable Component Usage](./public/reusable-component-1.jpg)
+![Component Implementation](./public/reusable-component-2.jpg)
 
 ## Getting Started
 
