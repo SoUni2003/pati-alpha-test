@@ -111,66 +111,66 @@ const BundlesSection = () => {
                   </div>
                 )}
                 <div className="overflow-hidden rounded-xl border font-nunito border-sculptique-green bg-white shadow-[0_18px_40px_rgba(20,90,56,0.22)]">
-                <input
-                  id={inputId}
-                  type="radio"
-                  name="bundle"
-                  className="sr-only"
-                  checked={selected}
-                  onChange={() => setSelectedBundle(bundle.title)}
-                />
-                <div className="flex items-center justify-between font-nunito gap-4 p-4">
-                  <div className="flex items-center gap-2">
-                    <span className="mt-0.5 flex h-[26px] w-[26px] flex-none items-center justify-center rounded-full border-2  border-sculptique-green">
-                      {selected && (
-                        <span className="h-3 w-3 rounded-full bg-sculptique-green" />
-                      )}
-                    </span>
-                    <div>
-                      <h3 className="text-base font-semibold text-sculptique-text">
-                        {bundle.title}
-                      </h3>
-                      <p className="mt-0.5 text-[10px] lg:text-xs font-medium">
-                        {bundle.subtitle}
+                  <input
+                    id={inputId}
+                    type="radio"
+                    name="bundle"
+                    className="sr-only"
+                    checked={selected}
+                    onChange={() => setSelectedBundle(bundle.title)}
+                  />
+                  <div className="flex items-center justify-between font-nunito gap-4 p-4">
+                    <div className="flex items-center gap-2">
+                      <span className="mt-0.5 flex h-[26px] w-[26px] flex-none items-center justify-center rounded-full border-2  border-sculptique-green">
+                        {selected && (
+                          <span className="h-3 w-3 rounded-full bg-sculptique-green" />
+                        )}
+                      </span>
+                      <div>
+                        <h3 className="text-base font-semibold text-sculptique-text">
+                          {bundle.title}
+                        </h3>
+                        <p className="mt-0.5 text-[10px] lg:text-xs font-medium">
+                          {bundle.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <p className="leading-none font-semibold text-sculptique-text text-base">
+                        {bundle.price}
+                      </p>
+                      <p className="text-xs text-sculptique-secondary line-through lg:text-sm">
+                        {bundle.compareAt}
                       </p>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <p className="leading-none font-semibold text-sculptique-text text-base">
-                      {bundle.price}
-                    </p>
-                    <p className="text-xs text-sculptique-secondary line-through lg:text-sm">
-                      {bundle.compareAt}
-                    </p>
-                  </div>
-                </div>
 
-                <ul className="mt-1 space-y-[1px]">
-                  {bundle.benefits.map((benefit) => {
-                    return (
-                      <li
-                        key={benefit.text}
-                        className={`relative flex items-center gap-2 px-3 py-1 text-xs font-semibold text-white sm:text-sm ${
-                          selected
-                            ? "bg-sculptique-green"
-                            : "bg-sculptique-green/80"
-                        }`}
-                      >
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/18">
-                          <img
-                            src={benefit.icon}
-                            alt=""
-                            className="h-8 w-8"
-                            loading="lazy"
-                          />
-                        </span>
-                        <span className="flex-1 leading-tight">
-                          {benefit.text}
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ul>
+                  <ul className="mt-1 space-y-[1px]">
+                    {bundle.benefits.map((benefit) => {
+                      return (
+                        <li
+                          key={benefit.text}
+                          className={`relative flex items-center gap-2 px-3 py-1 text-xs font-semibold text-white sm:text-sm ${
+                            selected
+                              ? "bg-sculptique-green"
+                              : "bg-sculptique-green/80"
+                          }`}
+                        >
+                          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/18">
+                            <img
+                              src={benefit.icon}
+                              alt=""
+                              className="h-8 w-8"
+                              loading="lazy"
+                            />
+                          </span>
+                          <span className="flex-1 leading-tight">
+                            {benefit.text}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </div>
               </label>
             );

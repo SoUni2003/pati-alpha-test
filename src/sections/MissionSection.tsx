@@ -23,9 +23,12 @@ const MissionSection = () => {
 
           <div className="lg:col-span-7">
             <picture>
-              <source media="(min-width: 1024px)" srcSet="https://trysculptique.com/cdn/shop/files/numbdeskt-min_png.png?v=1760942458" />
+              <source
+                media="(min-width: 1024px)"
+                srcSet="https://trysculptique.com/cdn/shop/files/numbdeskt-min_png.png?v=1760942458"
+              />
               <img
-                src="https://trysculptique.com/cdn/shop/files/numbmob-min_png.png?v=1760942458" 
+                src="https://trysculptique.com/cdn/shop/files/numbmob-min_png.png?v=1760942458"
                 alt="87% of women reported less noticeable eye bags, 89% noticed firmer skin"
                 className="w-full h-auto"
               />

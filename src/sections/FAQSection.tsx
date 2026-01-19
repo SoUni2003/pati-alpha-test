@@ -70,7 +70,9 @@ const FAQSection = () => {
             {FAQS.map((faq, idx) => (
               <div key={idx} className="border-b border-white/40 lg:px-5">
                 <button
-                  onClick={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
+                  onClick={() =>
+                    setExpandedIndex(expandedIndex === idx ? null : idx)
+                  }
                   className="flex w-full items-center justify-between py-5 text-left sm:items-center"
                 >
                   <h3 className="pr-4 font-sans text-lg text-sculptique-text sm:text-[19px]">
@@ -97,7 +99,7 @@ const FAQSection = () => {
                 >
                   <div className="overflow-hidden">
                     <div className="space-y-4 pb-5 text-base leading-relaxed text-sculptique-text/80 sm:text-lg">
-                      {faq.answer.split('\n\n').map((paragraph, i) => (
+                      {faq.answer.split("\n\n").map((paragraph, i) => (
                         <p key={i}>{paragraph}</p>
                       ))}
                     </div>
@@ -109,8 +111,11 @@ const FAQSection = () => {
         </div>
 
         <div className="mt-2 flex flex-col items-center justify-center gap-4 text-center">
-            <MainButton title="Try Lymphatic Drainage Risk-Free" to="https://pay.trysculptique.com/lymphatic/checkout" />
-            <MoneyBackGuarantee />
+          <MainButton
+            title="Try Lymphatic Drainage Risk-Free"
+            to="https://pay.trysculptique.com/lymphatic/checkout"
+          />
+          <MoneyBackGuarantee />
         </div>
       </div>
     </section>

@@ -302,7 +302,9 @@ const ReviewsSection = () => {
             alt="Diamond Authenticity"
             className="h-20"
           />
-          <span className="text-sculptique-blue font-nunito font-bold text-xs mt-1">100.0</span>
+          <span className="text-sculptique-blue font-nunito font-bold text-xs mt-1">
+            100.0
+          </span>
         </div>
 
         <div className="mb-6 relative border-y border-sculptique-pink/10 py-3">
@@ -392,7 +394,9 @@ const ReviewsSection = () => {
               </div>
 
               <div className="mt-2">
-                <p className="text-base font-nunito font-medium leading-relaxed">{review.text}</p>
+                <p className="text-base font-nunito font-medium leading-relaxed">
+                  {review.text}
+                </p>
               </div>
             </div>
           ))}

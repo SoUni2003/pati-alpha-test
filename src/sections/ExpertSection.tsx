@@ -33,11 +33,13 @@ const ExpertSection = () => {
             </div>
 
             <div className="mt-4 flex flex-col items-start gap-4">
-              
-               <MainButton title="Try Lymphatic Drainage Risk-Free" to="https://pay.trysculptique.com/lymphatic/checkout" />
+              <MainButton
+                title="Try Lymphatic Drainage Risk-Free"
+                to="https://pay.trysculptique.com/lymphatic/checkout"
+              />
 
               <div className="w-full flex items-center justify-center">
-                <MoneyBackGuarantee  />
+                <MoneyBackGuarantee />
               </div>
             </div>
           </div>

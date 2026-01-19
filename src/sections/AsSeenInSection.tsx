@@ -14,7 +14,7 @@ const AsSeenInSection = () => {
         <h3 className="font-trirong font-medium text-2xl text-black px-4 mt-4">
           As Seen In
         </h3>
-        
+
         <div className="relative flex w-full overflow-hidden">
           <div className="flex animate-infinite-scroll items-center gap-12 whitespace-nowrap pb-2 lg:gap-20 pr-12 lg:pr-20">
             {LOGOS.map((src, index) => (
@@ -35,7 +35,7 @@ const AsSeenInSection = () => {
                 loading="lazy"
               />
             ))}
-             {LOGOS.map((src, index) => (
+            {LOGOS.map((src, index) => (
               <img
                 key={`logo-3-${index}`}
                 src={src}
