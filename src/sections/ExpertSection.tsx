@@ -1,5 +1,4 @@
-import MainButton from "../components/MainButton";
-import MoneyBackGuarantee from "../components/MoneyBackGuarantee";
+import { MainButton, MoneyBackGuarantee } from "../components";
 
 const ExpertSection = () => {
   return (

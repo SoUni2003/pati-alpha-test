@@ -1,6 +1,5 @@
 import { useState } from "react";
-import MoneyBackGuarantee from "../components/MoneyBackGuarantee";
-import MainButton from "../components/MainButton";
+import { MainButton, MoneyBackGuarantee } from "../components";
 
 const FAQS = [
   {
