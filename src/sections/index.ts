@@ -12,18 +12,4 @@ import SymptomsSection from "./SymptomsSection";
 import VideoCarousel from "./VideoCarousel";
 import WhyNothingWorkedSection from "./WhyNothingWorkedSection";
 
-export {
-  Header,
-  AsSeenInSection,
-  ExpertSection,
-  FAQSection,
-  FeaturesSection,
-  FinalCTASection,
-  HeroSection,
-  IngredientsSection,
-  MissionSection,
-  ReviewsSection,
-  SymptomsSection,
-  VideoCarousel,
-  WhyNothingWorkedSection,
-};
+export { Header, AsSeenInSection, ExpertSection, FAQSection, FeaturesSection, FinalCTASection, HeroSection, IngredientsSection, MissionSection, ReviewsSection, SymptomsSection, VideoCarousel, WhyNothingWorkedSection };

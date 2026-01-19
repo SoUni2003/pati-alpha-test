@@ -82,15 +82,6 @@ const VideoCarousel = () => {
     }
   };
 
-  useEffect(() => {
-    const container = scrollContainerRef.current;
-    if (container) {
-      container.addEventListener("scroll", handleScroll);
-      requestAnimationFrame(() => handleScroll());
-      return () => container.removeEventListener("scroll", handleScroll);
-    }
-  }, []);
-
   const togglePlay = (index: number) => {
     const video = videoRefs.current[index];
     if (!video) return;
@@ -126,6 +117,15 @@ const VideoCarousel = () => {
       });
     }
   };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+      requestAnimationFrame(() => handleScroll());
+      return () => container.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
 
   return (
     <section className="bg-sculptique-yellow py-12 lg:py-[56px]">

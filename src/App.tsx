@@ -1,18 +1,4 @@
-import {
-  Header,
-  AsSeenInSection,
-  HeroSection,
-  SymptomsSection,
-  WhyNothingWorkedSection,
-  IngredientsSection,
-  ReviewsSection,
-  FeaturesSection,
-  ExpertSection,
-  FAQSection,
-  MissionSection,
-  FinalCTASection,
-  VideoCarousel,
-} from "./sections";
+import { Header, AsSeenInSection, ExpertSection, FAQSection, FeaturesSection, FinalCTASection, HeroSection, IngredientsSection, MissionSection, ReviewsSection, SymptomsSection, VideoCarousel, WhyNothingWorkedSection } from "./sections";
 
 const App = () => {
   return (
