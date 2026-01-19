@@ -36,13 +36,13 @@ const SymptomsSection = () => {
           {SYMPTOMS.map((symptom, idx) => (
             <div
               key={idx}
-              className='grid grid-cols-2 md:flex md:flex-col items-stretch md:gap-4 md:p-0 bg-white md:bg-transparent rounded-lg md:rounded-none shadow-md md:shadow-none'
+              className='grid grid-cols-2 md:flex md:flex-col lg:items-stretch md:gap-4 md:p-0 bg-white md:bg-transparent rounded-lg md:rounded-none'
             >
               <div className='w-full aspect-[1/1] md:w-full md:aspect-[200/171] shrink-0 overflow-hidden rounded-l-lg md:rounded-t-lg bg-sculptique-cream'>
                 <img src={symptom.image} alt='' className='w-full h-full object-cover' loading='lazy' />
               </div>
-              <div className='flex items-center justify-center bg-[#f7f7f7] p-4 text-center '>
-                <p className='font-nunito text-base font-medium leading-normal text-sculptique-text text-pretty min-h-[150px]'>{symptom.title}</p>
+              <div className='flex flex-col items-center justify-center bg-[#f7f7f7] p-4 text-center min-h-[150px] md:h-auto'>
+                <p className='font-nunito text-base font-medium leading-normal text-sculptique-text text-pretty'>{symptom.title}</p>
               </div>
             </div>
           ))}
