@@ -103,4 +103,4 @@ yarn preview
 
 ---
 
-*Thank you for reviewing my submission. I look forward to your feedback!*
+*Thank you for watching ~ ~*

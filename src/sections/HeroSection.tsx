@@ -208,7 +208,7 @@ const HeroSection = () => {
                       <img
                         src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/leaves_1247958_1_cf2e7df4-c113-4c3a-be49-f876ec94d873.png?v=1766822629"
                         alt=""
-                        className="h-4 w-4 sm:h-6 sm:w-6"
+                        className="h-6 w-6"
                         loading="lazy"
                       />
                     </span>
