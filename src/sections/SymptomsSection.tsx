@@ -48,12 +48,12 @@ const SymptomsSection = () => {
           ))}
         </div>
 
-        <div className='relative w-full md:max-w-[920px] mx-auto'>
+        <div className='relative w-full max-w-[420px] md:max-w-[920px] mx-auto mt-8 md:mt-0'>
           <div className='hidden md:block w-full mb-[-20px] relative z-20 pointer-events-none'>
             <img src='https://trysculptique.com/cdn/shop/files/Group_7207.png?v=1760690771' alt='' className='w-full h-auto' />
           </div>
           <div className='block md:hidden w-full mt-4 mb-[-20px] relative z-20 pointer-events-none'>
-            <img src='https://trysculptique.com/cdn/shop/files/Frame_1000003583.png?v=1760690769' alt='' className='w-full h-auto' />
+            <img src='https://trysculptique.com/cdn/shop/files/Frame_1000003583.png?v=1760690769' alt='' className='w-full max-w-[420px] h-auto' />
           </div>
 
           <div className='flex justify-center mt-8'>
