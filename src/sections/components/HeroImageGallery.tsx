@@ -56,7 +56,7 @@ const HeroImageGallery = () => {
                   <span className='flex h-6 w-6 flex-shrink-0 items-center justify-center'>
                     <img src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/leaves_1247958_1_cf2e7df4-c113-4c3a-be49-f876ec94d873.png?v=1766822629' alt='' className='h-6 w-6' loading='lazy' />
                   </span>
-                  <span className='whitespace-nowrap font-montserrat text-sm text-sculptique-secondary/75 tracking-[0.06rem]'>Nutritional Information</span>
+                  <span className='whitespace-nowrap font-montserrat text-sm text-sculptique-secondary tracking-[0.05em]'>Nutritional Information</span>
                 </div>
               </div>
             </>
@@ -89,11 +89,11 @@ const HeroImageGallery = () => {
             </div>
 
             <div className='absolute bottom-3 left-1/2 -translate-x-1/2 sm:bottom-8'>
-              <div className='flex items-center gap-2 px-6 py-2 bg-white opacity-85 hover:opacity-70 border border-black rounded-full cursor-pointer max-w-[290px]' style={{ lineHeight: '1.2em' }}>
+              <div className='flex items-center gap-2 px-6 py-2 bg-[#ffffffd9] hover:opacity-70 border border-black rounded-full cursor-pointer max-w-[290px]' style={{ lineHeight: '1.2em' }}>
                 <span className='flex h-6 w-6 flex-shrink-0 items-center justify-center'>
                   <img src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/leaves_1247958_1_cf2e7df4-c113-4c3a-be49-f876ec94d873.png?v=1766822629' alt='' className='h-6 w-6' loading='lazy' />
                 </span>
-                <span className='whitespace-nowrap font-montserrat text-sm text-sculptique-secondary/75 tracking-[0.06rem]'>Nutritional Information</span>
+                <span className='whitespace-nowrap font-montserrat text-sm text-sculptique-secondary tracking-[0.05em]'>Nutritional Information</span>
               </div>
             </div>
           </div>
