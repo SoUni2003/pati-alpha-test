@@ -5,7 +5,7 @@ const MissionSection = () => {
        <div className="px-4 md:px-0">
          <div className='grid grid-cols-1 gap-2 md:gap-8 md:grid-cols-12 md:gap-y-4 md:gap-x-16 md:items-start'>
           <div className='flex flex-col md:col-span-7 text-center'>
-            <h2 className='font-lora text-2xl leading-snug text-sculptique-text md:text-[32px] md:leading-[1.3] mb-4 font-medium'>
+            <h2 className='font-lora text-2xl text-center md:text-left leading-snug text-sculptique-text md:text-[32px] md:leading-[1.3] mb-4 font-medium mx-2 md:mx-0'>
               We’re On A Mission To Help 100,000,000 Women Visibly, Naturally Get Rid Of Bloating...And Feel Like Themselves Again
             </h2>
             <p className='mb-2 leading-[1.3] font-nunito text-lg text-sculptique-text font-medium'>Here's where we're at right now:</p>
