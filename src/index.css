@@ -15,7 +15,7 @@
 
 @layer components {
   .page-container {
-    @apply mx-auto w-full max-w-page px-[15px] sm:px-[50px];
+    @apply mx-auto w-full max-w-page px-[15px] md:px-[50px];
   }
 }
 

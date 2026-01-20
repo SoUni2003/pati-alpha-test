@@ -38,7 +38,7 @@ const SymptomsSection = () => {
               key={idx}
               className='grid grid-cols-2 md:flex md:flex-col lg:items-stretch md:gap-4 md:p-0 bg-white md:bg-transparent rounded-lg md:rounded-none'
             >
-              <div className='w-full aspect-[1/1] md:w-full md:aspect-[200/171] shrink-0 overflow-hidden rounded-l-lg md:rounded-t-lg bg-sculptique-cream'>
+              <div className='w-full aspect-[1/1] md:w-full md:aspect-[200/171] shrink-0 overflow-hidden rounded-l-sm md:rounded-t-lg bg-sculptique-cream'>
                 <img src={symptom.image} alt='' className='w-full h-full object-cover' loading='lazy' />
               </div>
               <div className='flex flex-col items-center justify-center bg-[#f7f7f7] p-4 text-center h-full min-h-[150px] md:h-auto'>
@@ -61,7 +61,7 @@ const SymptomsSection = () => {
           </div>
         </div>
 
-        <div className='mt-2 md:mt-4 md:max-w-[920px] mx-auto'>
+        <div className='mt-2 md:mt-4 max-w-[420px] md:max-w-[920px] mx-auto'>
           <div className='text-center mb-4 md:mb-10'>
             <h2 className='font-lora text-2xl md:text-[42px] text-sculptique-text md:leading-[1.3] font-medium'>
               The Connection <span className='text-sculptique-green'>You've Been Missing</span>
@@ -69,8 +69,8 @@ const SymptomsSection = () => {
           </div>
 
           <div className='rounded-2xl overflow-hidden'>
-            <img src='https://trysculptique.com/cdn/shop/files/Frame_1000003590.png?v=1760690771' alt='Symptoms vs Root Causes' className='hidden md:block w-full h-auto' />
-            <img src='https://trysculptique.com/cdn/shop/files/Frame_1000003590_1.png?v=1760690770' alt='Symptoms vs Root Causes' className='block md:hidden w-full h-auto' />
+            <img src='https://trysculptique.com/cdn/shop/files/Frame_1000003590.png?v=1760690771' alt='Symptoms vs Root Causes' className='hidden sm:block w-full h-auto' />
+            <img src='https://trysculptique.com/cdn/shop/files/Frame_1000003590_1.png?v=1760690770' alt='Symptoms vs Root Causes' className='block sm:hidden max-w-[420px] w-full h-auto' />
           </div>
         </div>
 

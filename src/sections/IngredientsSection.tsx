@@ -68,13 +68,13 @@ const IngredientsSection = () => {
 
   return (
     <section className='py-8'>
-      <div className='bg-[#f3eee0] py-10 lg:py-16 overflow-hidden'>
+      <div className='bg-[#f3eee0] py-10 md:py-16 overflow-hidden'>
         <div className='page-container'>
           <div className='text-center max-w-[800px] mx-auto mb-14'>
-            <h2 className='font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center mb-4'>
+            <h2 className='font-lora text-2xl leading-snug text-sculptique-text md:text-[32px] md:leading-[1.3] text-center mb-4'>
               <span className='text-sculptique-green'>The 8-Ingredient System</span> That Restores What Hormones Once Maintained
             </h2>
-            <p className='font-nunito text-base lg:text-lg text-sculptique-text font-medium leading-relaxed mx-auto'>
+            <p className='font-nunito text-base md:text-lg text-sculptique-text font-medium leading-relaxed mx-auto'>
               Sculptique is the only formula that addresses ALL 6 mechanisms of lymphatic dysfunction simultaneously—not with symbolic
               doses, but with therapeutic amounts based on clinical research.
               <br className='hidden md:block' />
@@ -82,12 +82,12 @@ const IngredientsSection = () => {
             </p>
           </div>
 
-          <div className='bg-black border border-black rounded-lg lg:rounded-2xl overflow-hidden'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px]'>
+          <div className='bg-black border border-black rounded-lg md:rounded-2xl overflow-hidden'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[1px]'>
               {INGREDIENTS.map((ingredient, idx) => (
                 <div
                   key={idx}
-                  className='bg-white p-3 lg:p-6 flex flex-col items-center text-center h-full cursor-pointer hover:bg-gray-50 transition-colors'
+                  className='bg-white p-3 md:p-6 flex flex-col items-center text-center h-full cursor-pointer hover:bg-gray-50 transition-colors'
                   onClick={() => toggleAccordion(idx)}>
                   <div className='flex items-center gap-2 mb-4 w-full justify-center'>
                     <img
@@ -98,16 +98,16 @@ const IngredientsSection = () => {
                     <span className='text-base font-nunito text-[#0c7c00]'>{ingredient.benefit}</span>
                   </div>
 
-                  <div className='w-full flex flex-row lg:flex-col items-center gap-3 lg:gap-0'>
-                    <div className='shrink-0 lg:w-full lg:flex lg:items-center lg:justify-center'>
+                  <div className='w-full flex flex-row md:flex-col items-center gap-3 md:gap-0'>
+                    <div className='shrink-0 md:w-full md:flex md:items-center md:justify-center'>
                       <img
                         src={ingredient.image}
                         alt={ingredient.name}
-                        className='w-[60px] h-10 lg:w-auto lg:h-20 lg:min-h-20 object-cover'
+                        className='w-[60px] h-10 md:w-auto md:h-20 md:min-h-20 object-cover'
                       />
                     </div>
 
-                    <div className='flex-1 w-full flex items-center justify-between lg:pt-2 pl-3 md:pl-0'>
+                    <div className='flex-1 w-full flex items-center justify-between md:pt-2 pl-3 md:pl-0'>
                       <div className='text-left'>
                         <h3 className='font-trirong text-base font-semibold text-sculptique-text leading-[1.3]'>{ingredient.name}</h3>
                       </div>

@@ -46,7 +46,7 @@ const HeroImageGallery = () => {
   }, [activeSlide]);
 
   return (
-    <div className='flex w-full flex-col items-center sm:w-[50%] max-w-[588px] '>
+    <div className='flex w-full flex-col items-center md:w-[50%]'>
       <div className='flex sm:hidden w-full flex-col mb-4'>
         <div className='relative w-full aspect-square bg-[#f7f7f7] rounded-lg overflow-hidden'>
           <div

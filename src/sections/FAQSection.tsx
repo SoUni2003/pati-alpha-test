@@ -58,16 +58,16 @@ const FAQSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>();
 
   return (
-    <section className='bg-white py-8 lg:py-[56px]'>
+    <section className='bg-white py-8 md:py-[56px]'>
       <div className='page-container'>
         <div className='rounded-2xl py-4'>
-          <h2 className='font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center mb-4'>
+          <h2 className='font-lora text-2xl leading-snug text-sculptique-text md:text-[32px] md:leading-[1.3] text-center mb-4'>
             Frequently Asked Questions
           </h2>
 
-          <div className='max-w-[824px] mx-auto bg-gradient-to-b from-white to-sculptique-yellow p-4 lg:p-8'>
+          <div className='max-w-[824px] rounded-xl mx-auto bg-gradient-to-b from-white to-sculptique-yellow p-4 md:p-8'>
             {FAQS.map((faq, idx) => (
-              <div key={idx} className='border-b border-white/40 lg:px-5'>
+              <div key={idx} className='border-b border-white/40 md:px-5'>
                 <button
                   onClick={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
                   className='flex w-full items-center justify-between py-5 text-left sm:items-center'>

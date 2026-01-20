@@ -30,7 +30,7 @@ const SELLING_POINTS = [
 
 const HeroProductDetails = () => {
   return (
-    <div className='w-full sm:w-[50%] max-w-[588px] mb-4'>
+    <div className='w-full md:w-[50%] md:min-w-[437px] mb-4'>
       <div className='flex items-center space-x-4'>
         <img
           src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_229.png?v=1752064359'
@@ -38,11 +38,11 @@ const HeroProductDetails = () => {
           className='h-[18px] w-auto '
           loading='lazy'
         />
-        <p className='text-xs font-nunito text-sculptique-text font-medium sm:text-base'>4.8/5 Excellent | Based on 2381 Reviews</p>
+        <p className='text-xs font-nunito text-sculptique-text font-medium md:text-base'>4.8/5 Excellent | Based on 2381 Reviews</p>
       </div>
 
-      <div className='flex flex-col gap-2 sm:block mt-5'>
-        <h1 className='font-lora text-2xl leading-tight text-sculptique-text sm:text-[28px]'>
+      <div className='flex flex-col gap-2 md:block mt-5'>
+        <h1 className='font-lora text-2xl leading-tight text-sculptique-text md:text-[28px]'>
           New Maximum Potency Formula – Lymphatic Drainage Capsules by Sculptique™
         </h1>
       </div>
@@ -50,14 +50,14 @@ const HeroProductDetails = () => {
       <ul className='mt-4 space-y-4'>
         {SELLING_POINTS.map((point) => (
           <li key={point.text} className='flex items-center gap-3'>
-            <img src={point.icon} alt='' className='h-[30px] w-[30px] flex-shrink-0 sm:h-[49px] sm:w-[49px]' loading='lazy' />
-            <p className='leading-[1.3] text-base sm:leading-6'>{point.text}</p>
+            <img src={point.icon} alt='' className='h-[30px] w-[30px] flex-shrink-0 md:h-[49px] md:w-[49px]' loading='lazy' />
+            <p className='leading-[1.3] text-base md:leading-6'>{point.text}</p>
           </li>
         ))}
       </ul>
       <div id='maximized' className='relative mt-4 w-full bg-white mb-10'>
-        <div className='flex flex-row sm:items-start sm:justify-start sm:gap-4'>
-          <div className='flex flex-row sm:items-center gap-2 sm:gap-4'>
+        <div className='flex flex-row md:items-start md:justify-start md:gap-4'>
+          <div className='flex flex-row md:items-center gap-2 md:gap-4'>
             <div className='flex items-center gap-2 text-sculptique-text'>
               <svg xmlns='http://www.w3.org/2000/svg' width='13' height='25' viewBox='0 0 17 35' fill='black' className='sm:w-[17px] sm:h-10'>
                 <path
