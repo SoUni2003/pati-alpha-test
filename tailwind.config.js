@@ -35,6 +35,7 @@ export default {
         lora: ['Lora', 'serif'],
         trirong: ['Trirong', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        arial: ['Arial', 'sans-serif'],
       },
       maxWidth: {
         page: '1340px',
