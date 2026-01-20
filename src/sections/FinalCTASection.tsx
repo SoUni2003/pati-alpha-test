@@ -13,7 +13,7 @@ const FinalCTASection = () => {
               </picture>
             </div>
 
-            <h2 className='font-lora text-3xl font-medium leading-[1.3] text-sculptique-text md:text-[32px] mb-4'>Stop Masking Symptoms. Start Restoring Root Cause.</h2>
+            <h2 className='font-lora text-2xl font-medium leading-[1.3] text-sculptique-text md:text-[32px] mb-4'>Stop Masking Symptoms. Start Restoring Root Cause.</h2>
 
             <p className='text-lg font-nunito leading-[1.3] text-sculptique-text mb-4 font-medium'>You deserve to feel like yourself again. To wake up without puffiness. To see your ankles. To look in the mirror and recognize the vibrant woman staring back. To have energy for the people you love.</p>
 
