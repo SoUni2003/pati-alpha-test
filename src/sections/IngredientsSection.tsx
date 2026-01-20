@@ -68,7 +68,7 @@ const IngredientsSection = () => {
 
   return (
     <section className='py-8'>
-      <div className='bg-[#f3eee0] py-16 overflow-hidden'>
+      <div className='bg-[#f3eee0] py-10 lg:py-16 overflow-hidden'>
         <div className='page-container'>
           <div className='text-center max-w-[800px] mx-auto mb-14'>
             <h2 className='font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center mb-4'>
@@ -132,7 +132,7 @@ const IngredientsSection = () => {
             </div>
           </div>
 
-          <div className='mt-8 md:mt-12 max-w-[580px] mx-auto'>
+          <div className='mt-10 md:mt-12 max-w-[580px] mx-auto'>
             <img
               src='https://trysculptique.com/cdn/shop/files/Frame_1000003583_3.png?v=1760697982'
               alt='The Synergistic Effect'
