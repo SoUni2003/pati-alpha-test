@@ -48,7 +48,7 @@ const SymptomsSection = () => {
           ))}
         </div>
 
-        <div className='relative w-full md:max-w-[920px] mx-auto mt-8'>
+        <div className='relative w-full md:max-w-[920px] mx-auto'>
           <div className='hidden md:block w-full mb-[-20px] relative z-20 pointer-events-none'>
             <img src='https://trysculptique.com/cdn/shop/files/Group_7207.png?v=1760690771' alt='' className='w-full h-auto' />
           </div>
