@@ -30,7 +30,7 @@ const SELLING_POINTS = [
 
 const HeroProductDetails = () => {
   return (
-    <div className='w-full md:w-[50%] md:min-w-[437px] mb-4'>
+    <div className='w-full md:w-[50%] md:min-w-[437px] mb-4 tracking-[0.06rem]'>
       <div className='flex items-center space-x-4'>
         <img
           src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_229.png?v=1752064359'
