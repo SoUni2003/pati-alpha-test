@@ -115,15 +115,15 @@ const VideoCarousel = () => {
   }, [handleScroll]);
 
   return (
-    <section className='bg-sculptique-yellow py-12 lg:py-[56px]'>
-      <div className='page-container'>
-        <div className='mb-4 flex flex-col items-center justify-center text-center'>
+    <section className='bg-sculptique-yellow py-8 md:py-[56px]'>
+      <div className='md:max-w-[1340px] mx-auto'>
+        <div className='mb-4 flex flex-col items-center justify-center text-center '>
           <img
             src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Trustpilot_review_2.png?v=1752485383'
             className='mb-4 h-11 object-contain'
             alt='Trustpilot Reviews'
           />
-          <h2 className='font-lora text-2xl leading-snug text-sculptique-text lg:text-[32px] lg:leading-[1.3] text-center'>
+          <h2 className='font-lora text-2xl leading-snug text-sculptique-text md:text-[32px] md:leading-[1.3] text-center px-9 md:px-0'>
             See The Stories of Sculptique™ Women Firsthand
           </h2>
         </div>
@@ -131,12 +131,12 @@ const VideoCarousel = () => {
         <div className='relative mb-12 mt-6'>
           <div
             ref={scrollContainerRef}
-            className='flex w-full pl-4 lg:pl-0 snap-x snap-mandatory gap-4 overflow-x-auto pb-4 scrollbar-hide md:w-full md:mx-0 md:px-0 lg:gap-4'
+            className='flex w-full pl-4 md:pl-0 snap-x snap-mandatory gap-4 overflow-x-auto pb-4 scrollbar-hide md:w-full md:mx-0 md:px-0 md:gap-4'
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {VIDEOS.map((video, index) => (
-              <div key={video.id} className='relative min-w-[78%] flex-shrink-0 snap-center lg:snap-start lg:min-w-[25%]'>
+              <div key={video.id} className='relative min-w-[78%] flex-shrink-0 snap-center md:snap-start md:min-w-[25%]'>
                 <div
-                  className='relative h-[476px] w-full overflow-hidden rounded-lg bg-gray-200 cursor-pointer group shadow-sm transition-transform hover:scale-[1.01]  lg:aspect-auto lg:h-[523px]'
+                  className='relative h-[476px] w-full overflow-hidden rounded-lg bg-gray-200 cursor-pointer group shadow-sm transition-transform hover:scale-[1.01]  md:aspect-auto md:h-[523px]'
                   onClick={() => togglePlay(index)}>
                   <video
                     ref={(el) => {
@@ -164,7 +164,7 @@ const VideoCarousel = () => {
             ))}
           </div>
 
-          <div className='mt-4 flex items-center justify-between gap-4 md:mt-8 md:gap-10'>
+          <div className='mt-4 flex items-center justify-between gap-4 md:mt-8 md:gap-10 px-[15px] md:mx-0'>
             <div className='relative h-[4px] w-full flex-1 overflow-hidden bg-[#e5e5e5]'>
               <div
                 className='absolute top-0 bottom-0 bg-[#039869]'
@@ -194,7 +194,7 @@ const VideoCarousel = () => {
           </div>
         </div>
 
-        <div className='flex flex-col items-center justify-center mt-12'>
+        <div className='flex flex-col items-center justify-center mt-12 px-[15px]'>
           <MainButton title='Try Lymphatic Drainage Risk-Free' to='https://pay.trysculptique.com/lymphatic/checkout' />
 
           <div className='mt-6 flex justify-center'>
