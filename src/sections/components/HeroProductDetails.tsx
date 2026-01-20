@@ -41,9 +41,9 @@ const HeroProductDetails = () => {
         <p className='text-xs font-nunito text-sculptique-text font-medium md:text-base'>4.8/5 Excellent | Based on 2381 Reviews</p>
       </div>
 
-      <div className='flex flex-col gap-2 md:block mt-5'>
-        <h1 className='font-lora text-2xl leading-tight text-sculptique-text md:text-[28px]'>
-          New Maximum Potency Formula – Lymphatic Drainage Capsules by Sculptique™
+      <div className='flex flex-col gap-2 md:block mt-4'>
+        <h1 className='font-lora text-2xl leading-[1.4] text-sculptique-text md:text-[28px] font-meium'>
+          New Maximum Potency Formula - Lymphatic Drainage Capsules by Sculptique™
         </h1>
       </div>
 

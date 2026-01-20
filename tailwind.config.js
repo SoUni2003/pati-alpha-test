@@ -30,7 +30,6 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
         nunito: ['Nunito', 'sans-serif'],
         lora: ['Lora', 'serif'],
         trirong: ['Trirong', 'serif'],

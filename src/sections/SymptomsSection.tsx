@@ -63,7 +63,7 @@ const SymptomsSection = () => {
 
         <div className='mt-2 md:mt-4 max-w-[420px] md:max-w-[920px] mx-auto'>
           <div className='text-center mb-4 md:mb-10'>
-            <h2 className='font-lora text-2xl md:text-[42px] text-sculptique-text md:leading-[1.3] font-medium'>
+            <h2 className='font-lora text-2xl md:text-[32px] text-sculptique-text md:leading-[1.3]'>
               The Connection <span className='text-sculptique-green'>You've Been Missing</span>
             </h2>
           </div>
@@ -77,7 +77,7 @@ const SymptomsSection = () => {
         <div className='mt-4'>
           <div className='text-center mb-8 md:mb-8'>
             <img src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_1000003589.png?v=1760690549' alt='' className='w-[34px] md:w-[46px] h-[46px] md:h-[65px] object-cover mx-auto' />
-            <h2 className='font-lora text-2xl md:text-[32px] text-sculptique-text md:leading-[1.3] font-medium px-4 md:px-0 mt-4'>
+            <h2 className='font-lora text-2xl md:text-[32px] text-sculptique-text md:leading-[1.3] px-4 md:px-0 mt-4'>
               Your <span className='text-sculptique-green'>Hidden </span> Drainage System
             </h2>
           </div>
