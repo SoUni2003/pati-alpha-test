@@ -32,25 +32,18 @@ const HeroProductDetails = () => {
   return (
     <div className='w-full md:w-[50%] md:min-w-[437px] mb-4 tracking-[0.06rem]'>
       <div className='flex items-center space-x-4'>
-        <img
-          src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_229.png?v=1752064359'
-          alt='Rating badge'
-          className='h-[18px] w-auto '
-          loading='lazy'
-        />
+        <img src='https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_229.png?v=1752064359' alt='Rating badge' className='h-[18px] w-auto ' loading='lazy' />
         <p className='text-xs font-nunito text-sculptique-text font-medium md:text-base'>4.8/5 Excellent | Based on 2381 Reviews</p>
       </div>
 
       <div className='flex flex-col gap-2 md:block mt-4'>
-        <h1 className='font-lora text-2xl leading-[1.4] text-sculptique-text md:text-[28px] font-meium'>
-          New Maximum Potency Formula - Lymphatic Drainage Capsules by Sculptique™
-        </h1>
+        <h1 className='font-lora text-2xl leading-[1.4] text-sculptique-text md:text-[28px] font-medium'>New Maximum Potency Formula - Lymphatic Drainage Capsules by Sculptique™</h1>
       </div>
 
       <ul className='mt-4 space-y-4'>
         {SELLING_POINTS.map((point) => (
           <li key={point.text} className='flex items-center gap-3'>
-            <img src={point.icon} alt='' className='h-[30px] w-[30px] flex-shrink-0 md:h-[49px] md:w-[49px]' loading='lazy' />
+            <img src={point.icon} alt='' className='object-contain w-[30px] h-[30px] flex-shrink-0 md:w-[49px] md:h-[49px] lg:w-[52px] lg:h-[52px]' loading='lazy' />
             <p className='leading-[1.3] text-base md:leading-6'>{point.text}</p>
           </li>
         ))}
@@ -83,44 +76,22 @@ const HeroProductDetails = () => {
               <span className='font-semibold'>381 clinicians </span> share this on
               <span className='italic'> FrontrowMD </span> <br />
               without compensation.
-              <a
-                href='#learn-more'
-                className='ml-2 inline-flex items-center text-[10px] lg:text-sm underline text-sculptique-text hover:underline underline-offset-2 hover:opacity-80 sm:text-[13px]'
-                aria-label='Click to learn more about the clinicians sharing this product'>
+              <a href='#learn-more' className='ml-2 inline-flex items-center text-[10px] lg:text-sm underline text-sculptique-text hover:underline underline-offset-2 hover:opacity-80 sm:text-[13px]' aria-label='Click to learn more about the clinicians sharing this product'>
                 Learn more
               </a>
               <div className='flex gap-1 lg:gap-3 flex-row items-center sm:gap-4'>
                 <div className='flex items-center -space-x-0.5'>
-                  <img
-                    src='https://assets.app.thefrontrowhealth.com/jijjnma3wz2ktevmvpuoewdnubm0'
-                    alt='Dr. Kimberly Rogers, MD'
-                    className='h-4 lg:h-5 w-4 lg:w-5 rounded-full border-2 border-white object-cover shadow-[0px_3px_6px_rgba(0,0,0,0.15)]'
-                  />
-                  <img
-                    src='https://assets.app.thefrontrowhealth.com/j3dpo0lkq5u6etn5fezqeizarel4'
-                    alt='Ageless Aesthetics &amp; Beauty Bar'
-                    className='-ml-2 h-4 lg:h-5 w-4 lg:w-5 rounded-full border-2 border-white object-cover shadow-[0px_3px_6px_rgba(0,0,0,0.15)]'
-                  />
-                  <img
-                    src='https://assets.app.thefrontrowhealth.com/pa8nliuewz7t7g0dmxjawwf0kr5a'
-                    alt='Dr. Green'
-                    className='-ml-2 h-4 lg:h-5 w-4 lg:w-5 rounded-full border-2 border-white object-cover shadow-[0px_3px_6px_rgba(0,0,0,0.15)]'
-                  />
+                  <img src='https://assets.app.thefrontrowhealth.com/jijjnma3wz2ktevmvpuoewdnubm0' alt='Dr. Kimberly Rogers, MD' className='h-4 lg:h-5 w-4 lg:w-5 rounded-full border-2 border-white object-cover shadow-[0px_3px_6px_rgba(0,0,0,0.15)]' />
+                  <img src='https://assets.app.thefrontrowhealth.com/j3dpo0lkq5u6etn5fezqeizarel4' alt='Ageless Aesthetics &amp; Beauty Bar' className='-ml-2 h-4 lg:h-5 w-4 lg:w-5 rounded-full border-2 border-white object-cover shadow-[0px_3px_6px_rgba(0,0,0,0.15)]' />
+                  <img src='https://assets.app.thefrontrowhealth.com/pa8nliuewz7t7g0dmxjawwf0kr5a' alt='Dr. Green' className='-ml-2 h-4 lg:h-5 w-4 lg:w-5 rounded-full border-2 border-white object-cover shadow-[0px_3px_6px_rgba(0,0,0,0.15)]' />
                 </div>
-                <a
-                  href='#reviews'
-                  className='inline-flex items-center text-[10px] font-semibold text-sculptique-text hover:underline underline-offset-2 hover:opacity-80 sm:text-[13px]'
-                  aria-label='Click to read reviews from clinicians sharing this product'>
+                <a href='#reviews' className='inline-flex items-center text-[10px] font-semibold text-sculptique-text hover:underline underline-offset-2 hover:opacity-80 sm:text-[13px]' aria-label='Click to read reviews from clinicians sharing this product'>
                   Read their reviews
                 </a>
               </div>
             </div>
           </div>
-          <button
-            type='button'
-            className='absolute sm:right-2 right-8 -top-0.5 sm:top-3 sm:static flex h-3 sm:h-4 w-3 sm:w-4 items-center justify-center rounded-2xl bg-neutral-200/80 text-sculptique-text transition hover:bg-neutral-300 shadow-sm border border-neutral-300'
-            id='close-button'
-            aria-label='Click to minimize banner'>
+          <button type='button' className='absolute sm:right-2 right-8 -top-0.5 sm:top-3 sm:static flex h-3 sm:h-4 w-3 sm:w-4 items-center justify-center rounded-2xl bg-neutral-200/80 text-sculptique-text transition hover:bg-neutral-300 shadow-sm border border-neutral-300' id='close-button' aria-label='Click to minimize banner'>
             <svg xmlns='http://www.w3.org/2000/svg' width='5' height='5' viewBox='0 0 6 6' fill='none'>
               <path d='M1 5.5L0.5 5L2.5 3L0.5 1L1 0.5L3 2.5L5 0.5L5.5 1L3.5 3L5.5 5L5 5.5L3 3.5L1 5.5Z' fill='#212121'></path>
             </svg>
